@@ -1,0 +1,3 @@
+AuthGroupFile /dev/null 
+<Limit GET POST> 
+</Limit>

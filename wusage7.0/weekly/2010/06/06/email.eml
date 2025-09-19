@@ -1,0 +1,2516 @@
+
+Subject: 
+
+<!-- Email Epoch Report Formatting Macros -->
+
+<!-- That Subject: heading is there to make sure there's no
+	whitespace before it. The rest of that line is output
+	below after we set up a few things. -->
+
+
+<!-- These use EML rather than HTML. This is done to produce
+	plaintext, which all email programs can easily read. 
+	See the documentation for complete information. -->
+
+<!-- 
+	"What's an epoch?"
+
+	An epoch is an individual day, week, or month, etc., depending
+	on the reporting frequency you have set in your configuration
+	file. This macro file formats the report for a single epoch. 
+
+	This macro file is also used for summary reports, and for
+	reports generated from separate referrer log and user 
+	agent log files. 
+-->
+
+<!-- Include the prologue first to get
+	standard macros like date-format. -->
+
+
+
+
+
+<!--	Here we write a fairly ordinary-looking email message,
+	inserting the macros for the components of the
+	epoch report where we want to see them. 
+	We also define important formatting macros
+	before we use them, or use other macros that
+	rely on them. -->
+
+<!-- epoch-range is used as the title and header. Only one of
+	these variations will be used. -->	
+Week of 6/6/2010 to 6/12/2010<br><br> <!-- Now the Subject: line is dealt with. -->
+Week of 6/6/2010 to 6/12/2010<br><br> <!-- This is a heading in the text of the message. -->
+
+<!-- Executive summaries are always nice to have. The executive
+	summary replaces the old 'unique' report from wusage 6.0
+	and below. -->
+Executive Summary<br><br>
+
+The web site received 75 visits. A typical visitor
+examined 1.48 documents before leaving the site.
+A typical visit lasted for 0.08 minutes.
+The longest visit lasted for 6 minutes.
+<p>
+Visitors came from 35 distinct Internet addresses.
+<p>
+The web server delivered 36 unique documents
+one or more times each.
+<p>
+3 distinct types of documents were delivered.
+<p>
+There were 72 requests for documents which
+did not exist on the web server.
+<p>
+The web server was linked to by 2 distinct
+pages on other web servers.
+<p>
+The web server was linked to by one or more pages found on
+2 distinct web sites.
+<p>
+3 distinct search keywords were
+used to locate documents on the web server via Internet search 
+servers, such as Altavista(tm) and Yahoo(tm).
+<p>
+Visitors used 19 distinct web browsers and
+other web access programs to reach the web server.
+<p>
+Visitors used 14 distinct operating systems
+on their computers.
+<p>
+Visitors followed a total of 4 distinct,
+non-trivial "trails" among the documents found on the
+web server.
+<p>
+
+<!-- End of executive summary. -->
+<!-- Totals report entries for this particular epoch 
+	appear right in the page. First, we set the
+	format to be used for each entry. -->
+
+
+<p>
+Important Totals
+<etable>
+<eformat>
+<eheading cols=30>Item</eheading>
+<eheading cols=14>Accesses</heading>
+<eheading cols=14>Bytes</heading>
+<eheading cols=14>Visits</heading>
+</eformat>
+<!-- Insert the actual rows of the table. -->
+<etr>
+	<etd>All Documents</etd>
+	<etd>110</etd>
+	<etd>1,253,217</etd>
+	<etd>75</etd>
+	</etr>
+<etr>
+	<etd>Home Page</etd>
+	<etd>36</etd>
+	<etd>198,520</etd>
+	<etd>33</etd>
+	</etr>
+
+</etable>
+
+<!-- Now we include individual reports, if desired. -->
+
+<!-- To keep this macro file readable, we use 'include' to get the 
+	macros for these pages from separate files. -->
+
+<!-- This macro file writes the email version of the by-hour report. -->
+
+Week of 6/6/2010 to 6/12/2010: Traffic by Hour
+<p>
+Figures are averages for that hour
+	of each day in the time period analyzed.
+
+<!-- Set the format for an individual row -->
+
+
+<etable>
+        <eformat>
+        <eheading cols=10>Hour</eheading>
+        <eheading cols=12 numeric>Accesses</eheading>
+        <!-- <eheading cols=6 numeric>%</eheading> -->
+        <eheading cols=14 numeric>Bytes</eheading>
+        <!-- <eheading cols=6 numeric>%</eheading> -->
+        <eheading cols=12 numeric>Visits</eheading>
+        <!-- <eheading cols=6 numeric>%</eheading> -->
+	
+        </eformat>
+<!-- Insert the actual rows -->
+<etr>
+	<etd>00:00</etd>
+	<etd>0.14</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>0.00</etd>
+	<!-- <etd>0.00</etd> -->
+	<etd>0.14</etd>
+	<!-- <etd>1.33</etd> -->
+	
+</etr>
+<etr>
+	<etd>01:00</etd>
+	<etd>0.29</etd>
+	<!-- <etd>1.82</etd> -->
+	<etd>4,745.29</etd>
+	<!-- <etd>2.65</etd> -->
+	<etd>0.29</etd>
+	<!-- <etd>2.67</etd> -->
+	
+</etr>
+<etr>
+	<etd>02:00</etd>
+	<etd>0.43</etd>
+	<!-- <etd>2.73</etd> -->
+	<etd>1,620.57</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>0.43</etd>
+	<!-- <etd>4.00</etd> -->
+	
+</etr>
+<etr>
+	<etd>03:00</etd>
+	<etd>0.29</etd>
+	<!-- <etd>1.82</etd> -->
+	<etd>1,620.57</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>0.29</etd>
+	<!-- <etd>2.67</etd> -->
+	
+</etr>
+<etr>
+	<etd>04:00</etd>
+	<etd>1.71</etd>
+	<!-- <etd>10.91</etd> -->
+	<etd>25,109.86</etd>
+	<!-- <etd>14.03</etd> -->
+	<etd>0.43</etd>
+	<!-- <etd>4.00</etd> -->
+	
+</etr>
+<etr>
+	<etd>05:00</etd>
+	<etd>1.43</etd>
+	<!-- <etd>9.09</etd> -->
+	<etd>20,793.29</etd>
+	<!-- <etd>11.61</etd> -->
+	<etd>0.43</etd>
+	<!-- <etd>4.00</etd> -->
+	
+</etr>
+<etr>
+	<etd>06:00</etd>
+	<etd>0.29</etd>
+	<!-- <etd>1.82</etd> -->
+	<etd>810.29</etd>
+	<!-- <etd>0.45</etd> -->
+	<etd>0.29</etd>
+	<!-- <etd>2.67</etd> -->
+	
+</etr>
+<etr>
+	<etd>07:00</etd>
+	<etd>0.29</etd>
+	<!-- <etd>1.82</etd> -->
+	<etd>4,730.43</etd>
+	<!-- <etd>2.64</etd> -->
+	<etd>0.29</etd>
+	<!-- <etd>2.67</etd> -->
+	
+</etr>
+<etr>
+	<etd>08:00</etd>
+	<etd>0.71</etd>
+	<!-- <etd>4.55</etd> -->
+	<etd>6,155.29</etd>
+	<!-- <etd>3.44</etd> -->
+	<etd>0.71</etd>
+	<!-- <etd>6.67</etd> -->
+	
+</etr>
+<etr>
+	<etd>09:00</etd>
+	<etd>0.57</etd>
+	<!-- <etd>3.64</etd> -->
+	<etd>2,636.14</etd>
+	<!-- <etd>1.47</etd> -->
+	<etd>0.43</etd>
+	<!-- <etd>4.00</etd> -->
+	
+</etr>
+<etr>
+	<etd>10:00</etd>
+	<etd>0.57</etd>
+	<!-- <etd>3.64</etd> -->
+	<etd>11,803.00</etd>
+	<!-- <etd>6.59</etd> -->
+	<etd>0.57</etd>
+	<!-- <etd>5.33</etd> -->
+	
+</etr>
+<etr>
+	<etd>11:00</etd>
+	<etd>0.86</etd>
+	<!-- <etd>5.45</etd> -->
+	<etd>13,120.86</etd>
+	<!-- <etd>7.33</etd> -->
+	<etd>0.86</etd>
+	<!-- <etd>8.00</etd> -->
+	
+</etr>
+<etr>
+	<etd>12:00</etd>
+	<etd>0.71</etd>
+	<!-- <etd>4.55</etd> -->
+	<etd>11,377.43</etd>
+	<!-- <etd>6.36</etd> -->
+	<etd>0.57</etd>
+	<!-- <etd>5.33</etd> -->
+	
+</etr>
+<etr>
+	<etd>13:00</etd>
+	<etd>0.14</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>810.29</etd>
+	<!-- <etd>0.45</etd> -->
+	<etd>0.14</etd>
+	<!-- <etd>1.33</etd> -->
+	
+</etr>
+<etr>
+	<etd>14:00</etd>
+	<etd>0.43</etd>
+	<!-- <etd>2.73</etd> -->
+	<etd>2,636.14</etd>
+	<!-- <etd>1.47</etd> -->
+	<etd>0.29</etd>
+	<!-- <etd>2.67</etd> -->
+	
+</etr>
+<etr>
+	<etd>15:00</etd>
+	<etd>0.71</etd>
+	<!-- <etd>4.55</etd> -->
+	<etd>7,976.71</etd>
+	<!-- <etd>4.46</etd> -->
+	<etd>0.71</etd>
+	<!-- <etd>6.67</etd> -->
+	
+</etr>
+<etr>
+	<etd>16:00</etd>
+	<etd>1.43</etd>
+	<!-- <etd>9.09</etd> -->
+	<etd>26,993.86</etd>
+	<!-- <etd>15.08</etd> -->
+	<etd>0.29</etd>
+	<!-- <etd>2.67</etd> -->
+	
+</etr>
+<etr>
+	<etd>17:00</etd>
+	<etd>1.14</etd>
+	<!-- <etd>7.27</etd> -->
+	<etd>11,834.43</etd>
+	<!-- <etd>6.61</etd> -->
+	<etd>0.43</etd>
+	<!-- <etd>4.00</etd> -->
+	
+</etr>
+<etr>
+	<etd>18:00</etd>
+	<etd>0.86</etd>
+	<!-- <etd>5.45</etd> -->
+	<etd>4,252.29</etd>
+	<!-- <etd>2.38</etd> -->
+	<etd>0.71</etd>
+	<!-- <etd>6.67</etd> -->
+	
+</etr>
+<etr>
+	<etd>19:00</etd>
+	<etd>0.14</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>3,935.00</etd>
+	<!-- <etd>2.20</etd> -->
+	<etd>0.14</etd>
+	<!-- <etd>1.33</etd> -->
+	
+</etr>
+<etr>
+	<etd>20:00</etd>
+	<etd>0.57</etd>
+	<!-- <etd>3.64</etd> -->
+	<etd>5,540.71</etd>
+	<!-- <etd>3.09</etd> -->
+	<etd>0.57</etd>
+	<!-- <etd>5.33</etd> -->
+	
+</etr>
+<etr>
+	<etd>21:00</etd>
+	<etd>1.43</etd>
+	<!-- <etd>9.09</etd> -->
+	<etd>3,737.29</etd>
+	<!-- <etd>2.09</etd> -->
+	<etd>1.29</etd>
+	<!-- <etd>12.00</etd> -->
+	
+</etr>
+<etr>
+	<etd>22:00</etd>
+	<etd>0.29</etd>
+	<!-- <etd>1.82</etd> -->
+	<etd>4,965.43</etd>
+	<!-- <etd>2.77</etd> -->
+	<etd>0.29</etd>
+	<!-- <etd>2.67</etd> -->
+	
+</etr>
+<etr>
+	<etd>23:00</etd>
+	<etd>0.29</etd>
+	<!-- <etd>1.82</etd> -->
+	<etd>1,825.86</etd>
+	<!-- <etd>1.02</etd> -->
+	<etd>0.14</etd>
+	<!-- <etd>1.33</etd> -->
+	
+</etr>
+
+</etable>
+
+
+<!-- This macro file writes the email version of the by-day report. -->
+
+Week of 6/6/2010 to 6/12/2010: Traffic by Day
+<p>
+<!-- Set the format for an individual row -->
+
+
+<etable>
+	<eformat>
+	<eheading cols=16>Date</eheading>
+        <eheading cols=12 numeric>Accesses</eheading>
+        <!-- <eheading cols=6 numeric>%</eheading> -->
+        <eheading cols=14 numeric>Bytes</eheading>
+        <!-- <eheading cols=6 numeric>%</eheading> -->
+        <eheading cols=12 numeric>Visits</eheading>
+        <!-- <eheading cols=6 numeric>%</eheading> -->
+        <!-- <eheading cols=12 numeric>Bits per Sec</eheading> -->
+        <!-- <eheading cols=12 numeric>Bytes per Sec</eheading> -->
+	</eformat>
+<!-- Insert the actual rows -->
+<etr>
+	<etd>6/6/2010</etd>
+	<etd>0	</etd>
+	<!-- <etd>0.00	</etd> -->
+	<etd>0	</etd>
+	<!-- <etd>0.00	</etd> -->
+	<etd>0	</etd>
+	<!-- <etd>0.00	</etd> -->
+	<!-- <etd>0.00	</etd> -->
+	<!-- <etd>0.00	</etd> -->
+</etr>
+<etr>
+	<etd>6/7/2010</etd>
+	<etd>21	</etd>
+	<!-- <etd>19.09	</etd> -->
+	<etd>370,111	</etd>
+	<!-- <etd>29.53	</etd> -->
+	<etd>9	</etd>
+	<!-- <etd>12.00	</etd> -->
+	<!-- <etd>34.27	</etd> -->
+	<!-- <etd>4.28	</etd> -->
+</etr>
+<etr>
+	<etd>6/8/2010</etd>
+	<etd>22	</etd>
+	<!-- <etd>20.00	</etd> -->
+	<etd>247,270	</etd>
+	<!-- <etd>19.73	</etd> -->
+	<etd>14	</etd>
+	<!-- <etd>18.67	</etd> -->
+	<!-- <etd>22.90	</etd> -->
+	<!-- <etd>2.86	</etd> -->
+</etr>
+<etr>
+	<etd>6/9/2010</etd>
+	<etd>20	</etd>
+	<!-- <etd>18.18	</etd> -->
+	<etd>158,586	</etd>
+	<!-- <etd>12.65	</etd> -->
+	<etd>16	</etd>
+	<!-- <etd>21.33	</etd> -->
+	<!-- <etd>14.68	</etd> -->
+	<!-- <etd>1.84	</etd> -->
+</etr>
+<etr>
+	<etd>6/10/2010</etd>
+	<etd>17	</etd>
+	<!-- <etd>15.45	</etd> -->
+	<etd>221,617	</etd>
+	<!-- <etd>17.68	</etd> -->
+	<etd>16	</etd>
+	<!-- <etd>21.33	</etd> -->
+	<!-- <etd>20.52	</etd> -->
+	<!-- <etd>2.57	</etd> -->
+</etr>
+<etr>
+	<etd>6/11/2010</etd>
+	<etd>10	</etd>
+	<!-- <etd>9.09	</etd> -->
+	<etd>43,902	</etd>
+	<!-- <etd>3.50	</etd> -->
+	<etd>10	</etd>
+	<!-- <etd>13.33	</etd> -->
+	<!-- <etd>4.07	</etd> -->
+	<!-- <etd>0.51	</etd> -->
+</etr>
+<etr>
+	<etd>6/12/2010</etd>
+	<etd>20	</etd>
+	<!-- <etd>18.18	</etd> -->
+	<etd>211,731	</etd>
+	<!-- <etd>16.89	</etd> -->
+	<etd>10	</etd>
+	<!-- <etd>13.33	</etd> -->
+	<!-- <etd>19.60	</etd> -->
+	<!-- <etd>2.45	</etd> -->
+</etr>
+
+</etable>
+
+Week of 6/6/2010 to 6/12/2010: Top 
+		36 of 
+		36 Documents
+	Sorted by Access Count
+<img src="documents.png" width="200" height="200">
+
+<etable>
+	<eformat>
+	<eheading cols=5 numeric>Rank</eheading>
+	<eheading cols=20>Document</eheading>
+	<eheading cols=12 numeric>Accesses</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	<eheading cols=12 numeric>Bytes</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	<eheading cols=12 numeric>Visits</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	</eformat>
+
+<etr>
+	<etd>1</etd>
+	<etd>
+	/[Referrers]
+	
+	
+	</etd>
+	<etd>36</etd>
+	<!-- <etd>32.73</etd> -->
+	<etd>198,520</etd>
+	<!-- <etd>15.84</etd> -->
+	<etd>32</etd>
+	<!-- <etd>30.48</etd> -->
+</etr>
+<etr>
+	<etd>2</etd>
+	<etd>
+	/missing_people.html[Referrers]
+	
+	
+	</etd>
+	<etd>9</etd>
+	<!-- <etd>8.18</etd> -->
+	<etd>124,336</etd>
+	<!-- <etd>9.92</etd> -->
+	<etd>9</etd>
+	<!-- <etd>8.57</etd> -->
+</etr>
+<etr>
+	<etd>3</etd>
+	<etd>
+	/reunion.html
+	</etd>
+	<etd>6</etd>
+	<!-- <etd>5.45</etd> -->
+	<etd>38,540</etd>
+	<!-- <etd>3.08</etd> -->
+	<etd>6</etd>
+	<!-- <etd>5.71</etd> -->
+</etr>
+<etr>
+	<etd>4</etd>
+	<etd>
+	/contact.html
+	</etd>
+	<etd>6</etd>
+	<!-- <etd>5.45</etd> -->
+	<etd>42,654</etd>
+	<!-- <etd>3.40</etd> -->
+	<etd>6</etd>
+	<!-- <etd>5.71</etd> -->
+</etr>
+<etr>
+	<etd>5</etd>
+	<etd>
+	/yearbook.html
+	</etd>
+	<etd>5</etd>
+	<!-- <etd>4.55</etd> -->
+	<etd>38,350</etd>
+	<!-- <etd>3.06</etd> -->
+	<etd>5</etd>
+	<!-- <etd>4.76</etd> -->
+</etr>
+<etr>
+	<etd>6</etd>
+	<etd>
+	/favicon.ico
+	</etd>
+	<etd>4</etd>
+	<!-- <etd>3.64</etd> -->
+	<etd>5,624</etd>
+	<!-- <etd>0.45</etd> -->
+	<etd>4</etd>
+	<!-- <etd>3.81</etd> -->
+</etr>
+<etr>
+	<etd>7</etd>
+	<etd>
+	/yrbk_pg1.html
+	</etd>
+	<etd>3</etd>
+	<!-- <etd>2.73</etd> -->
+	<etd>88,230</etd>
+	<!-- <etd>7.04</etd> -->
+	<etd>3</etd>
+	<!-- <etd>2.86</etd> -->
+</etr>
+<etr>
+	<etd>8</etd>
+	<etd>
+	/where.html
+	</etd>
+	<etd>3</etd>
+	<!-- <etd>2.73</etd> -->
+	<etd>28,116</etd>
+	<!-- <etd>2.24</etd> -->
+	<etd>3</etd>
+	<!-- <etd>2.86</etd> -->
+</etr>
+<etr>
+	<etd>9</etd>
+	<etd>
+	/yrbk_pg30.html
+	</etd>
+	<etd>3</etd>
+	<!-- <etd>2.73</etd> -->
+	<etd>27,545</etd>
+	<!-- <etd>2.20</etd> -->
+	<etd>3</etd>
+	<!-- <etd>2.86</etd> -->
+</etr>
+<etr>
+	<etd>10</etd>
+	<etd>
+	/yrbk_pg16.html
+	</etd>
+	<etd>3</etd>
+	<!-- <etd>2.73</etd> -->
+	<etd>0</etd>
+	<!-- <etd>0.00</etd> -->
+	<etd>3</etd>
+	<!-- <etd>2.86</etd> -->
+</etr>
+<etr>
+	<etd>11</etd>
+	<etd>
+	/yrbk_pg65.html
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>1.82</etd> -->
+	<etd>27,545</etd>
+	<!-- <etd>2.20</etd> -->
+	<etd>2</etd>
+	<!-- <etd>1.90</etd> -->
+</etr>
+<etr>
+	<etd>12</etd>
+	<etd>
+	/yrbk_pg2.html
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>1.82</etd> -->
+	<etd>54,258</etd>
+	<!-- <etd>4.33</etd> -->
+	<etd>2</etd>
+	<!-- <etd>1.90</etd> -->
+</etr>
+<etr>
+	<etd>13</etd>
+	<etd>
+	/yrbk_pg63.html
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>1.82</etd> -->
+	<etd>55,090</etd>
+	<!-- <etd>4.40</etd> -->
+	<etd>2</etd>
+	<!-- <etd>1.90</etd> -->
+</etr>
+<etr>
+	<etd>14</etd>
+	<etd>
+	/yrbk_pg9.html
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>1.82</etd> -->
+	<etd>55,062</etd>
+	<!-- <etd>4.39</etd> -->
+	<etd>2</etd>
+	<!-- <etd>1.90</etd> -->
+</etr>
+<etr>
+	<etd>15</etd>
+	<etd>
+	/yrbk_pg32.html
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>1.82</etd> -->
+	<etd>0</etd>
+	<!-- <etd>0.00</etd> -->
+	<etd>2</etd>
+	<!-- <etd>1.90</etd> -->
+</etr>
+<etr>
+	<etd>16</etd>
+	<etd>
+	/yrbk_pg58.html
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>1.82</etd> -->
+	<etd>0</etd>
+	<!-- <etd>0.00</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>17</etd>
+	<etd>
+	/yrbk_pg62.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,365</etd>
+	<!-- <etd>2.18</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>18</etd>
+	<etd>
+	/yrbk_pg61.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,545</etd>
+	<!-- <etd>2.20</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>19</etd>
+	<etd>
+	/yrbk_pg57.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,545</etd>
+	<!-- <etd>2.20</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>20</etd>
+	<etd>
+	/yrbk_pg44.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,545</etd>
+	<!-- <etd>2.20</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>21</etd>
+	<etd>
+	/yrbk_pg17.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,441</etd>
+	<!-- <etd>2.19</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>22</etd>
+	<etd>
+	/yrbk_pg69.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,088</etd>
+	<!-- <etd>2.16</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>23</etd>
+	<etd>
+	/yrbk_pg10.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>29,853</etd>
+	<!-- <etd>2.38</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>24</etd>
+	<etd>
+	/yrbk_pg60.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>0</etd>
+	<!-- <etd>0.00</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>25</etd>
+	<etd>
+	/yrbk_pg24.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,441</etd>
+	<!-- <etd>2.19</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>26</etd>
+	<etd>
+	/yrbk_pg54.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,545</etd>
+	<!-- <etd>2.20</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>27</etd>
+	<etd>
+	/yrbk_pg48.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,545</etd>
+	<!-- <etd>2.20</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>28</etd>
+	<etd>
+	/yrbk_pg39.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,545</etd>
+	<!-- <etd>2.20</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>29</etd>
+	<etd>
+	/yrbk_pg45.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,545</etd>
+	<!-- <etd>2.20</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>30</etd>
+	<etd>
+	/yrbk_pg21.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,441</etd>
+	<!-- <etd>2.19</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>31</etd>
+	<etd>
+	/yrbk_pg68.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>0</etd>
+	<!-- <etd>0.00</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>32</etd>
+	<etd>
+	/yrbk_pg67.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,545</etd>
+	<!-- <etd>2.20</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>33</etd>
+	<etd>
+	/yrbk_pg64.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,545</etd>
+	<!-- <etd>2.20</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>34</etd>
+	<etd>
+	/yrbk_pg51.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,545</etd>
+	<!-- <etd>2.20</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>35</etd>
+	<etd>
+	/yrbk_pg28.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>0</etd>
+	<!-- <etd>0.00</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+<etr>
+	<etd>36</etd>
+	<etd>
+	/yrbk_pg3.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>0.91</etd> -->
+	<etd>27,268</etd>
+	<!-- <etd>2.18</etd> -->
+	<etd>1</etd>
+	<!-- <etd>0.95</etd> -->
+</etr>
+
+</etable>
+
+
+
+Week of 6/6/2010 to 6/12/2010: Top 
+		10 of 
+		28 Entry Pages
+	Sorted by Entry Count
+<img src="entrypages.png" width="200" height="200">
+
+<etable>
+	<eformat>
+	<eheading cols=5 numeric>Rank</eheading>
+	<eheading cols=40>Entry Page</eheading>
+	<eheading cols=20>Entry Count</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	</eformat>
+
+<etr>
+	<etd>1</etd>
+	<etd>
+	/[Referrers]
+	
+	
+	</etd>
+	<etd>32</etd>
+	<!-- <etd>42.67</etd> -->
+</etr>
+<etr>
+	<etd>2</etd>
+	<etd>
+	/missing_people.html[Referrers]
+	
+	
+	</etd>
+	<etd>6</etd>
+	<!-- <etd>8.00</etd> -->
+</etr>
+<etr>
+	<etd>3</etd>
+	<etd>
+	/reunion.html
+	</etd>
+	<etd>3</etd>
+	<!-- <etd>4.00</etd> -->
+</etr>
+<etr>
+	<etd>4</etd>
+	<etd>
+	/yearbook.html
+	</etd>
+	<etd>3</etd>
+	<!-- <etd>4.00</etd> -->
+</etr>
+<etr>
+	<etd>5</etd>
+	<etd>
+	/yrbk_pg30.html
+	</etd>
+	<etd>3</etd>
+	<!-- <etd>4.00</etd> -->
+</etr>
+<etr>
+	<etd>6</etd>
+	<etd>
+	/yrbk_pg16.html
+	</etd>
+	<etd>3</etd>
+	<!-- <etd>4.00</etd> -->
+</etr>
+<etr>
+	<etd>7</etd>
+	<etd>
+	/yrbk_pg65.html
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>2.67</etd> -->
+</etr>
+<etr>
+	<etd>8</etd>
+	<etd>
+	/favicon.ico
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>2.67</etd> -->
+</etr>
+<etr>
+	<etd>9</etd>
+	<etd>
+	/yrbk_pg32.html
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>2.67</etd> -->
+</etr>
+<etr>
+	<etd>10</etd>
+	<etd>
+	/yrbk_pg63.html
+	</etd>
+	<etd>1</etd>
+	<!-- <etd>1.33</etd> -->
+</etr>
+
+</etable>
+
+
+
+Week of 6/6/2010 to 6/12/2010: Top 
+		10 of 
+		30 Exit Pages
+	Sorted by Exit Count
+<img src="exitpages.png" width="200" height="200">
+
+<etable>
+	<eformat>
+	<eheading cols=5 numeric>Rank</eheading>
+	<eheading cols=40>Exit Page</eheading>
+	<eheading cols=20>Exit Count</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	</eformat>
+
+<etr>
+	<etd>1</etd>
+	<etd>
+	/[Referrers]
+	
+	
+	</etd>
+	<etd>27</etd>
+	<!-- <etd>36.00</etd> -->
+</etr>
+<etr>
+	<etd>2</etd>
+	<etd>
+	/missing_people.html[Referrers]
+	
+	
+	</etd>
+	<etd>5</etd>
+	<!-- <etd>6.67</etd> -->
+</etr>
+<etr>
+	<etd>3</etd>
+	<etd>
+	/contact.html
+	</etd>
+	<etd>4</etd>
+	<!-- <etd>5.33</etd> -->
+</etr>
+<etr>
+	<etd>4</etd>
+	<etd>
+	/reunion.html
+	</etd>
+	<etd>3</etd>
+	<!-- <etd>4.00</etd> -->
+</etr>
+<etr>
+	<etd>5</etd>
+	<etd>
+	/favicon.ico
+	</etd>
+	<etd>3</etd>
+	<!-- <etd>4.00</etd> -->
+</etr>
+<etr>
+	<etd>6</etd>
+	<etd>
+	/yrbk_pg30.html
+	</etd>
+	<etd>3</etd>
+	<!-- <etd>4.00</etd> -->
+</etr>
+<etr>
+	<etd>7</etd>
+	<etd>
+	/yrbk_pg16.html
+	</etd>
+	<etd>3</etd>
+	<!-- <etd>4.00</etd> -->
+</etr>
+<etr>
+	<etd>8</etd>
+	<etd>
+	/yrbk_pg65.html
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>2.67</etd> -->
+</etr>
+<etr>
+	<etd>9</etd>
+	<etd>
+	/yearbook.html
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>2.67</etd> -->
+</etr>
+<etr>
+	<etd>10</etd>
+	<etd>
+	/yrbk_pg9.html
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>2.67</etd> -->
+</etr>
+
+</etable>
+
+
+
+Directories Report
+
+<!-- This report is structured a little bit differently, because there are 
+	many directory reports for individual subdirectories. We must 
+	write a directory-report-format macro, and then invoke the
+	built-in directory-reports macro, which uses directory-report-format 
+	as many times as necessary. -->
+
+/: All Items
+	
+	<etable>
+		<eformat>
+		<!-- We chose to comment out percentages
+			to make the message fit in 79 columns.
+			You might choose another solution. -->
+		<eheading cols=5 numeric>Rank</eheading>
+		<eheading cols=20>Item</eheading>
+		<eheading cols=12 numeric>Accesses</eheading>
+<!--		<!-- <eheading cols=6 numeric>%</eheading> --> -->
+		<eheading cols=12 numeric>Bytes</eheading>
+<!-- 		<!-- <eheading cols=6 numeric>%</eheading> --> -->
+		<eheading cols=12 numeric>Visits</eheading>
+<!--		<!-- <eheading cols=6 numeric>%</eheading> --> -->
+		</eformat>
+	
+	<etr>
+		<etd>1</etd>
+		<etd>
+		/[Referrers]
+		
+		
+		</etd>
+		<etd>36</etd>
+		<!-- <etd>32.73</etd> -->
+		<etd>198,520</etd>
+		<!-- <etd>15.84</etd> -->
+		<etd>32</etd>
+		<!-- <etd>30.48</etd> -->
+	</etr>
+	<etr>
+		<etd>2</etd>
+		<etd>
+		/missing_people.html[Referrers]
+		
+		
+		</etd>
+		<etd>9</etd>
+		<!-- <etd>8.18</etd> -->
+		<etd>124,336</etd>
+		<!-- <etd>9.92</etd> -->
+		<etd>9</etd>
+		<!-- <etd>8.57</etd> -->
+	</etr>
+	<etr>
+		<etd>3</etd>
+		<etd>
+		/contact.html
+		</etd>
+		<etd>6</etd>
+		<!-- <etd>5.45</etd> -->
+		<etd>42,654</etd>
+		<!-- <etd>3.40</etd> -->
+		<etd>6</etd>
+		<!-- <etd>5.71</etd> -->
+	</etr>
+	<etr>
+		<etd>4</etd>
+		<etd>
+		/reunion.html
+		</etd>
+		<etd>6</etd>
+		<!-- <etd>5.45</etd> -->
+		<etd>38,540</etd>
+		<!-- <etd>3.08</etd> -->
+		<etd>6</etd>
+		<!-- <etd>5.71</etd> -->
+	</etr>
+	<etr>
+		<etd>5</etd>
+		<etd>
+		/yearbook.html
+		</etd>
+		<etd>5</etd>
+		<!-- <etd>4.55</etd> -->
+		<etd>38,350</etd>
+		<!-- <etd>3.06</etd> -->
+		<etd>5</etd>
+		<!-- <etd>4.76</etd> -->
+	</etr>
+	<etr>
+		<etd>6</etd>
+		<etd>
+		/favicon.ico
+		</etd>
+		<etd>4</etd>
+		<!-- <etd>3.64</etd> -->
+		<etd>5,624</etd>
+		<!-- <etd>0.45</etd> -->
+		<etd>4</etd>
+		<!-- <etd>3.81</etd> -->
+	</etr>
+	<etr>
+		<etd>7</etd>
+		<etd>
+		/where.html
+		</etd>
+		<etd>3</etd>
+		<!-- <etd>2.73</etd> -->
+		<etd>28,116</etd>
+		<!-- <etd>2.24</etd> -->
+		<etd>3</etd>
+		<!-- <etd>2.86</etd> -->
+	</etr>
+	<etr>
+		<etd>8</etd>
+		<etd>
+		/yrbk_pg1.html
+		</etd>
+		<etd>3</etd>
+		<!-- <etd>2.73</etd> -->
+		<etd>88,230</etd>
+		<!-- <etd>7.04</etd> -->
+		<etd>3</etd>
+		<!-- <etd>2.86</etd> -->
+	</etr>
+	<etr>
+		<etd>9</etd>
+		<etd>
+		/yrbk_pg16.html
+		</etd>
+		<etd>3</etd>
+		<!-- <etd>2.73</etd> -->
+		<etd>0</etd>
+		<!-- <etd>0.00</etd> -->
+		<etd>3</etd>
+		<!-- <etd>2.86</etd> -->
+	</etr>
+	<etr>
+		<etd>10</etd>
+		<etd>
+		/yrbk_pg30.html
+		</etd>
+		<etd>3</etd>
+		<!-- <etd>2.73</etd> -->
+		<etd>27,545</etd>
+		<!-- <etd>2.20</etd> -->
+		<etd>3</etd>
+		<!-- <etd>2.86</etd> -->
+	</etr>
+	<etr>
+		<etd>11</etd>
+		<etd>
+		/yrbk_pg2.html
+		</etd>
+		<etd>2</etd>
+		<!-- <etd>1.82</etd> -->
+		<etd>54,258</etd>
+		<!-- <etd>4.33</etd> -->
+		<etd>2</etd>
+		<!-- <etd>1.90</etd> -->
+	</etr>
+	<etr>
+		<etd>12</etd>
+		<etd>
+		/yrbk_pg32.html
+		</etd>
+		<etd>2</etd>
+		<!-- <etd>1.82</etd> -->
+		<etd>0</etd>
+		<!-- <etd>0.00</etd> -->
+		<etd>2</etd>
+		<!-- <etd>1.90</etd> -->
+	</etr>
+	<etr>
+		<etd>13</etd>
+		<etd>
+		/yrbk_pg58.html
+		</etd>
+		<etd>2</etd>
+		<!-- <etd>1.82</etd> -->
+		<etd>0</etd>
+		<!-- <etd>0.00</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>14</etd>
+		<etd>
+		/yrbk_pg63.html
+		</etd>
+		<etd>2</etd>
+		<!-- <etd>1.82</etd> -->
+		<etd>55,090</etd>
+		<!-- <etd>4.40</etd> -->
+		<etd>2</etd>
+		<!-- <etd>1.90</etd> -->
+	</etr>
+	<etr>
+		<etd>15</etd>
+		<etd>
+		/yrbk_pg65.html
+		</etd>
+		<etd>2</etd>
+		<!-- <etd>1.82</etd> -->
+		<etd>27,545</etd>
+		<!-- <etd>2.20</etd> -->
+		<etd>2</etd>
+		<!-- <etd>1.90</etd> -->
+	</etr>
+	<etr>
+		<etd>16</etd>
+		<etd>
+		/yrbk_pg9.html
+		</etd>
+		<etd>2</etd>
+		<!-- <etd>1.82</etd> -->
+		<etd>55,062</etd>
+		<!-- <etd>4.39</etd> -->
+		<etd>2</etd>
+		<!-- <etd>1.90</etd> -->
+	</etr>
+	<etr>
+		<etd>17</etd>
+		<etd>
+		/yrbk_pg10.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>29,853</etd>
+		<!-- <etd>2.38</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>18</etd>
+		<etd>
+		/yrbk_pg17.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,441</etd>
+		<!-- <etd>2.19</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>19</etd>
+		<etd>
+		/yrbk_pg21.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,441</etd>
+		<!-- <etd>2.19</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>20</etd>
+		<etd>
+		/yrbk_pg24.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,441</etd>
+		<!-- <etd>2.19</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>21</etd>
+		<etd>
+		/yrbk_pg28.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>0</etd>
+		<!-- <etd>0.00</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>22</etd>
+		<etd>
+		/yrbk_pg3.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,268</etd>
+		<!-- <etd>2.18</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>23</etd>
+		<etd>
+		/yrbk_pg39.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,545</etd>
+		<!-- <etd>2.20</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>24</etd>
+		<etd>
+		/yrbk_pg44.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,545</etd>
+		<!-- <etd>2.20</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>25</etd>
+		<etd>
+		/yrbk_pg45.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,545</etd>
+		<!-- <etd>2.20</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>26</etd>
+		<etd>
+		/yrbk_pg48.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,545</etd>
+		<!-- <etd>2.20</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>27</etd>
+		<etd>
+		/yrbk_pg51.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,545</etd>
+		<!-- <etd>2.20</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>28</etd>
+		<etd>
+		/yrbk_pg54.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,545</etd>
+		<!-- <etd>2.20</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>29</etd>
+		<etd>
+		/yrbk_pg57.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,545</etd>
+		<!-- <etd>2.20</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>30</etd>
+		<etd>
+		/yrbk_pg60.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>0</etd>
+		<!-- <etd>0.00</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>31</etd>
+		<etd>
+		/yrbk_pg61.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,545</etd>
+		<!-- <etd>2.20</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>32</etd>
+		<etd>
+		/yrbk_pg62.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,365</etd>
+		<!-- <etd>2.18</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>33</etd>
+		<etd>
+		/yrbk_pg64.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,545</etd>
+		<!-- <etd>2.20</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>34</etd>
+		<etd>
+		/yrbk_pg67.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,545</etd>
+		<!-- <etd>2.20</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>35</etd>
+		<etd>
+		/yrbk_pg68.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>0</etd>
+		<!-- <etd>0.00</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	<etr>
+		<etd>36</etd>
+		<etd>
+		/yrbk_pg69.html
+		</etd>
+		<etd>1</etd>
+		<!-- <etd>0.91</etd> -->
+		<etd>27,088</etd>
+		<!-- <etd>2.16</etd> -->
+		<etd>1</etd>
+		<!-- <etd>0.95</etd> -->
+	</etr>
+	
+	</etable>
+
+
+Week of 6/6/2010 to 6/12/2010: Top 
+		10 of 
+		35 Visitor Sites
+	Sorted by Access Count
+<img src="sites.png" width="200" height="200">
+
+<etable>
+	<eformat>
+	<eheading cols=5 numeric>Rank</eheading>
+	<eheading cols=20>Site</eheading>
+	<eheading cols=12 numeric>Accesses</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	<eheading cols=12 numeric>Bytes</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	<eheading cols=12 numeric>Visits</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	</eformat>
+
+<etr>
+	<etd>1</etd>
+	<etd>
+	cpe-74-67-41-232.nycap.res.rr.com		
+	</etd>
+	<etd>13</etd>
+	<!-- <etd>11.82</etd> -->
+	<etd>241,440</etd>
+	<!-- <etd>19.27</etd> -->
+	<etd>1</etd>
+	<!-- <etd>1.33</etd> -->
+</etr>
+<etr>
+	<etd>2</etd>
+	<etd>
+	ips-crawl2.colo-fo.ilg1.verisign.com		
+	</etd>
+	<etd>10</etd>
+	<!-- <etd>9.09</etd> -->
+	<etd>142,552</etd>
+	<!-- <etd>11.37</etd> -->
+	<etd>1</etd>
+	<!-- <etd>1.33</etd> -->
+</etr>
+<etr>
+	<etd>3</etd>
+	<etd>
+	spider53.yandex.ru		
+	</etd>
+	<etd>9</etd>
+	<!-- <etd>8.18</etd> -->
+	<etd>22,688</etd>
+	<!-- <etd>1.81</etd> -->
+	<etd>9</etd>
+	<!-- <etd>12.00</etd> -->
+</etr>
+<etr>
+	<etd>4</etd>
+	<etd>
+	crawl-19c.cuil.com		
+	</etd>
+	<etd>9</etd>
+	<!-- <etd>8.18</etd> -->
+	<etd>247,226</etd>
+	<!-- <etd>19.73</etd> -->
+	<etd>9</etd>
+	<!-- <etd>12.00</etd> -->
+</etr>
+<etr>
+	<etd>5</etd>
+	<etd>
+	copilot.thunderstone.com		
+	</etd>
+	<etd>8</etd>
+	<!-- <etd>7.27</etd> -->
+	<etd>112,336</etd>
+	<!-- <etd>8.96</etd> -->
+	<etd>1</etd>
+	<!-- <etd>1.33</etd> -->
+</etr>
+<etr>
+	<etd>6</etd>
+	<etd>
+	crawl-66-249-67-132.googlebot.com		
+	</etd>
+	<etd>8</etd>
+	<!-- <etd>7.27</etd> -->
+	<etd>5,672</etd>
+	<!-- <etd>0.45</etd> -->
+	<etd>7</etd>
+	<!-- <etd>9.33</etd> -->
+</etr>
+<etr>
+	<etd>7</etd>
+	<etd>
+	crawl-12c.cuil.com		
+	</etd>
+	<etd>5</etd>
+	<!-- <etd>4.55</etd> -->
+	<etd>43,701</etd>
+	<!-- <etd>3.49</etd> -->
+	<etd>5</etd>
+	<!-- <etd>6.67</etd> -->
+</etr>
+<etr>
+	<etd>8</etd>
+	<etd>
+	190.13.198.226		
+	</etd>
+	<etd>5</etd>
+	<!-- <etd>4.55</etd> -->
+	<etd>28,360</etd>
+	<!-- <etd>2.26</etd> -->
+	<etd>3</etd>
+	<!-- <etd>4.00</etd> -->
+</etr>
+<etr>
+	<etd>9</etd>
+	<etd>
+	b3091014.crawl.yahoo.net		
+	</etd>
+	<etd>4</etd>
+	<!-- <etd>3.64</etd> -->
+	<etd>28,922</etd>
+	<!-- <etd>2.31</etd> -->
+	<etd>4</etd>
+	<!-- <etd>5.33</etd> -->
+</etr>
+<etr>
+	<etd>10</etd>
+	<etd>
+	cpe0040015030c8-cm0013718868b0.cpe.net.cable.rogers.com		
+	</etd>
+	<etd>4</etd>
+	<!-- <etd>3.64</etd> -->
+	<etd>25,562</etd>
+	<!-- <etd>2.04</etd> -->
+	<etd>2</etd>
+	<!-- <etd>2.67</etd> -->
+</etr>
+
+</etable>
+
+
+
+Week of 6/6/2010 to 6/12/2010: Top 
+		10 of 
+		19 Browsers (User Agents)
+	Sorted by Access Count
+<img src="useragents.png" width="200" height="200">
+
+<etable>
+	<eformat>
+	<eheading cols=5 numeric>Rank</eheading>
+	<eheading cols=20>Product</eheading>
+	<eheading cols=12 numeric>Accesses</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	<eheading cols=12 numeric>Bytes</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	<eheading cols=12 numeric>Visits</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	</eformat>
+
+<etr>
+	<etd>1</etd>
+	<etd>
+	Netscape 5.0		
+	</etd>
+	<etd>38</etd>
+	<!-- <etd>34.55</etd> -->
+	<etd>680,591</etd>
+	<!-- <etd>54.31</etd> -->
+	<etd>17</etd>
+	<!-- <etd>22.67</etd> -->
+</etr>
+<etr>
+	<etd>2</etd>
+	<etd>
+	Win16		
+	</etd>
+	<etd>9</etd>
+	<!-- <etd>8.18</etd> -->
+	<etd>22,688</etd>
+	<!-- <etd>1.81</etd> -->
+	<etd>9</etd>
+	<!-- <etd>12.00</etd> -->
+</etr>
+<etr>
+	<etd>3</etd>
+	<etd>
+	Googlebot/2.1		
+	</etd>
+	<etd>9</etd>
+	<!-- <etd>8.18</etd> -->
+	<etd>5,672</etd>
+	<!-- <etd>0.45</etd> -->
+	<etd>8</etd>
+	<!-- <etd>10.67</etd> -->
+</etr>
+<etr>
+	<etd>4</etd>
+	<etd>
+	http://search.thunderstone.com/texis/websearch/about.html		
+	</etd>
+	<etd>8</etd>
+	<!-- <etd>7.27</etd> -->
+	<etd>112,336</etd>
+	<!-- <etd>8.96</etd> -->
+	<etd>1</etd>
+	<!-- <etd>1.33</etd> -->
+</etr>
+<etr>
+	<etd>5</etd>
+	<etd>
+	Microsoft Internet Explorer 7.0		
+	</etd>
+	<etd>8</etd>
+	<!-- <etd>7.27</etd> -->
+	<etd>98,888</etd>
+	<!-- <etd>7.89</etd> -->
+	<etd>8</etd>
+	<!-- <etd>10.67</etd> -->
+</etr>
+<etr>
+	<etd>6</etd>
+	<etd>
+	Microsoft Internet Explorer 6.0		
+	</etd>
+	<etd>7</etd>
+	<!-- <etd>6.36</etd> -->
+	<etd>73,445</etd>
+	<!-- <etd>5.86</etd> -->
+	<etd>7</etd>
+	<!-- <etd>9.33</etd> -->
+</etr>
+<etr>
+	<etd>7</etd>
+	<etd>
+	Hmm 		
+	</etd>
+	<etd>6</etd>
+	<!-- <etd>5.45</etd> -->
+	<etd>34,032</etd>
+	<!-- <etd>2.72</etd> -->
+	<etd>4</etd>
+	<!-- <etd>5.33</etd> -->
+</etr>
+<etr>
+	<etd>8</etd>
+	<etd>
+	Yahoo! Slurp/3.0		
+	</etd>
+	<etd>4</etd>
+	<!-- <etd>3.64</etd> -->
+	<etd>28,922</etd>
+	<!-- <etd>2.31</etd> -->
+	<etd>4</etd>
+	<!-- <etd>5.33</etd> -->
+</etr>
+<etr>
+	<etd>9</etd>
+	<etd>
+	User-Agent: Mozilla/5.0 		
+	</etd>
+	<etd>4</etd>
+	<!-- <etd>3.64</etd> -->
+	<etd>25,562</etd>
+	<!-- <etd>2.04</etd> -->
+	<etd>2</etd>
+	<!-- <etd>2.67</etd> -->
+</etr>
+<etr>
+	<etd>10</etd>
+	<etd>
+	Exabot/3.0 		
+	</etd>
+	<etd>3</etd>
+	<!-- <etd>2.73</etd> -->
+	<etd>82,635</etd>
+	<!-- <etd>6.59</etd> -->
+	<etd>3</etd>
+	<!-- <etd>4.00</etd> -->
+</etr>
+
+</etable>
+
+
+
+Week of 6/6/2010 to 6/12/2010: Top 
+		10 of 
+		14 Operating Systems
+	Sorted by Access Count
+<img src="os.png" width="200" height="200">
+
+<etable>
+	<eformat>
+	<eheading cols=5 numeric>Rank</eheading>
+	<eheading cols=20>Product</eheading>
+	<eheading cols=12 numeric>Accesses</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	<eheading cols=12 numeric>Bytes</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	<eheading cols=12 numeric>Visits</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	</eformat>
+
+<etr>
+	<etd>1</etd>
+	<etd>
+	Windows NT		
+	</etd>
+	<etd>36</etd>
+	<!-- <etd>32.73</etd> -->
+	<etd>463,361</etd>
+	<!-- <etd>36.97</etd> -->
+	<etd>21</etd>
+	<!-- <etd>29.17</etd> -->
+</etr>
+<etr>
+	<etd>2</etd>
+	<etd>
+	Twiceler-0.9 http://www.cuil.com/twiceler/robot.html		
+	</etd>
+	<etd>14</etd>
+	<!-- <etd>12.73</etd> -->
+	<etd>290,927</etd>
+	<!-- <etd>23.21</etd> -->
+	<etd>14</etd>
+	<!-- <etd>19.44</etd> -->
+</etr>
+<etr>
+	<etd>3</etd>
+	<etd>
+	-		
+	</etd>
+	<etd>11</etd>
+	<!-- <etd>10.00</etd> -->
+	<etd>130,789</etd>
+	<!-- <etd>10.44</etd> -->
+	<etd>0</etd>
+	<!-- <etd>0.00</etd> -->
+</etr>
+<etr>
+	<etd>4</etd>
+	<etd>
+	X Window System (Unix)		
+	</etd>
+	<etd>10</etd>
+	<!-- <etd>9.09</etd> -->
+	<etd>142,552</etd>
+	<!-- <etd>11.37</etd> -->
+	<etd>1</etd>
+	<!-- <etd>1.39</etd> -->
+</etr>
+<etr>
+	<etd>5</etd>
+	<etd>
+	I		
+	</etd>
+	<etd>9</etd>
+	<!-- <etd>8.18</etd> -->
+	<etd>22,688</etd>
+	<!-- <etd>1.81</etd> -->
+	<etd>9</etd>
+	<!-- <etd>12.50</etd> -->
+</etr>
+<etr>
+	<etd>6</etd>
+	<etd>
+	+http://www.google.com/bot.html		
+	</etd>
+	<etd>9</etd>
+	<!-- <etd>8.18</etd> -->
+	<etd>5,672</etd>
+	<!-- <etd>0.45</etd> -->
+	<etd>8</etd>
+	<!-- <etd>11.11</etd> -->
+</etr>
+<etr>
+	<etd>7</etd>
+	<etd>
+	Neo's fucking hacker		
+	</etd>
+	<etd>6</etd>
+	<!-- <etd>5.45</etd> -->
+	<etd>34,032</etd>
+	<!-- <etd>2.72</etd> -->
+	<etd>4</etd>
+	<!-- <etd>5.56</etd> -->
+</etr>
+<etr>
+	<etd>8</etd>
+	<etd>
+	http://help.yahoo.com/help/us/ysearch/slurp		
+	</etd>
+	<etd>4</etd>
+	<!-- <etd>3.64</etd> -->
+	<etd>28,922</etd>
+	<!-- <etd>2.31</etd> -->
+	<etd>4</etd>
+	<!-- <etd>5.56</etd> -->
+</etr>
+<etr>
+	<etd>9</etd>
+	<etd>
+	+http://search.msn.com/msnbot.htm		
+	</etd>
+	<etd>3</etd>
+	<!-- <etd>2.73</etd> -->
+	<etd>27,545</etd>
+	<!-- <etd>2.20</etd> -->
+	<etd>3</etd>
+	<!-- <etd>4.17</etd> -->
+</etr>
+<etr>
+	<etd>10</etd>
+	<etd>
+	BiggerBetter		
+	</etd>
+	<etd>3</etd>
+	<!-- <etd>2.73</etd> -->
+	<etd>82,635</etd>
+	<!-- <etd>6.59</etd> -->
+	<etd>3</etd>
+	<!-- <etd>4.17</etd> -->
+</etr>
+
+</etable>
+
+
+
+Week of 6/6/2010 to 6/12/2010: Top 
+		2 of 
+		2 Referring Pages
+	Sorted by Access Count
+<img src="referrers.png" width="200" height="200">
+
+<etable>
+	<eformat>
+	<eheading cols=5 numeric>Rank</eheading>
+	<eheading cols=20>Referring Page</eheading>
+	<eheading cols=12 numeric>Accesses</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	<eheading cols=12 numeric>Bytes</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	</eformat>
+
+<etr>
+	<etd>1
+	<etd>
+	http://www.google.com/search
+	<etd>3</etd>
+	<!-- <etd>75.00</etd> -->
+	<etd>36,756</etd>
+	<!-- <etd>86.63</etd> -->
+</etr>
+<etr>
+	<etd>2
+	<etd>
+	http://www.google.de
+	<etd>1</etd>
+	<!-- <etd>25.00</etd> -->
+	<etd>5,672</etd>
+	<!-- <etd>13.37</etd> -->
+</etr>
+
+</etable>
+
+
+
+Week of 6/6/2010 to 6/12/2010: Top 
+		2 of 
+		2 Referring Sites
+	Sorted by Access Count
+<img src="referringsites.png" width="200" height="200">
+
+<etable>
+	<eformat>
+	<eheading cols=5 numeric>Rank</eheading>
+	<eheading cols=20>Referring Site</eheading>
+	<eheading cols=12 numeric>Accesses</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	<eheading cols=12 numeric>Bytes</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	</eformat>
+
+<etr>
+	<etd>1
+	<etd>
+	http://www.google.com
+	<etd>3</etd>
+	<!-- <etd>75.00</etd> -->
+	<etd>36,756</etd>
+	<!-- <etd>86.63</etd> -->
+</etr>
+<etr>
+	<etd>2
+	<etd>
+	http://www.google.de
+	<etd>1</etd>
+	<!-- <etd>25.00</etd> -->
+	<etd>5,672</etd>
+	<!-- <etd>13.37</etd> -->
+</etr>
+
+</etable>
+
+
+
+Week of 6/6/2010 to 6/12/2010: Top 
+		3 of 
+		3 Search Keywords
+	
+
+
+Sorted by Access Count
+<img src="searchkeywords.png" width="200" height="200">
+
+<etable>
+	<eformat>
+	<eheading cols=5 numeric>Rank</eheading>
+	<eheading cols=20>Search Keyword(s)</eheading>
+	<eheading cols=12 numeric>Accesses</eheading>
+	<eheading cols=6 numeric>%</eheading>
+	</eformat>
+
+<etr>
+	<etd>1
+	<etd>
+	michaela daley pilloni		
+	<etd>1</etd>
+	<etd>33.33</etd>
+</etr>
+<etr>
+	<etd>2
+	<etd>
+	cranston high school east class of 1971		
+	<etd>1</etd>
+	<etd>33.33</etd>
+</etr>
+<etr>
+	<etd>3
+	<etd>
+	claudia beth akerstein		
+	<etd>1</etd>
+	<etd>33.33</etd>
+</etr>
+
+</etable>
+
+
+
+Week of 6/6/2010 to 6/12/2010: Top 
+		10 of 
+		72 Documents Not Found
+	
+
+
+Sorted by Access Count
+<img src="notfound.png" width="200" height="200">
+
+<etable>
+	<eformat>
+	<eheading cols=5 numeric>Rank</eheading>
+	<eheading cols=20>Document</eheading>
+	<eheading cols=12 numeric>Accesses</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	</eformat>
+
+<etr>
+	<etd>1</etd>
+	<etd>
+	/robots.txt
+	</etd>
+	<etd>50</etd>
+	<!-- <etd>34.97</etd> -->
+</etr>
+<etr>
+	<etd>2</etd>
+	<etd>
+	http://www.wantsfly.com/prx2.php
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>1.40</etd> -->
+</etr>
+<etr>
+	<etd>3</etd>
+	<etd>
+	/search/install.txt
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>1.40</etd> -->
+</etr>
+<etr>
+	<etd>4</etd>
+	<etd>
+	/sphider/install.txt
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>1.40</etd> -->
+</etr>
+<etr>
+	<etd>5</etd>
+	<etd>
+	/free-sphider-plus/install.txt
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>1.40</etd> -->
+</etr>
+<etr>
+	<etd>6</etd>
+	<etd>
+	/ns/sphider/install.txt
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>1.40</etd> -->
+</etr>
+<etr>
+	<etd>7</etd>
+	<etd>
+	/ns/install.txt
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>1.40</etd> -->
+</etr>
+<etr>
+	<etd>8</etd>
+	<etd>
+	/sphider1.3/install.txt
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>1.40</etd> -->
+</etr>
+<etr>
+	<etd>9</etd>
+	<etd>
+	/sphider1.2/install.txt
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>1.40</etd> -->
+</etr>
+<etr>
+	<etd>10</etd>
+	<etd>
+	/WebCalendar/tools/send_reminders.php
+	</etd>
+	<etd>2</etd>
+	<!-- <etd>1.40</etd> -->
+</etr>
+
+</etable>
+
+
+
+Week of 6/6/2010 to 6/12/2010: 
+		10 Example Visits
+	
+<br>
+Overall Visit Statistics
+<etable>
+<eformat>
+	<eheading cols=40>Category</eheading>
+	<eheading cols=20>Value</eheading>
+</eformat>
+<etr>
+	<etd>Total Visits</etd>
+	<etd>75</etd>
+</etr>
+<etr>
+	<etd>Average Steps per Visit</etd>
+	<etd>1.48</etd>
+</etr>
+<etr>
+	<etd>Average Minutes per Visit</etd>
+	<etd>0.08</etd>
+</etr>
+<etr>
+	<etd>Longest Single Visit (in Minutes)</etd>
+	<etd>6.00</etd>
+</etr>
+</etable>
+Example Visits
+
+<etable>
+	<eformat>
+	<eheading cols=25>Visitor</eheading>
+	<eheading cols=10>Minutes</eheading>
+	<eheading cols=40>Trail</eheading>
+	</eformat>
+
+<etr>
+	<etd>-:-:208.80.193.39:MSIE 6.0:Windows NT 5.1; SV1; FunWebProducts; .NET CLR 1.0.3705; .NET CLR 1.1.4322; Media Center PC 4.0; PeoplePal 3.0; HbTools 4.8.4</etd>
+	<etd>0</etd>
+	<etd>[/]
+</etd>
+</etr>
+<etr>
+	<etd>-:-:66.249.67.132:Googlebot/2.1:+http://www.google.com/bot.html</etd>
+	<etd>0</etd>
+	<etd>[/yrbk_pg65.html]
+</etd>
+</etr>
+<etr>
+	<etd>-:-:67.218.116.166:Mozilla/5.0 :Twiceler-0.9 http://www.cuil.com/twiceler/robot.html</etd>
+	<etd>0</etd>
+	<etd>[/yrbk_pg30.html]
+</etd>
+</etr>
+<etr>
+	<etd>-:-:67.218.116.166:Mozilla/5.0 :Twiceler-0.9 http://www.cuil.com/twiceler/robot.html</etd>
+	<etd>0</etd>
+	<etd>[/yrbk_pg24.html]
+</etd>
+</etr>
+<etr>
+	<etd>-:-:67.218.116.166:Mozilla/5.0 :Twiceler-0.9 http://www.cuil.com/twiceler/robot.html</etd>
+	<etd>0</etd>
+	<etd>[/yrbk_pg54.html]
+</etd>
+</etr>
+<etr>
+	<etd>-:-:67.218.116.166:Mozilla/5.0 :Twiceler-0.9 http://www.cuil.com/twiceler/robot.html</etd>
+	<etd>0</etd>
+	<etd>[/yrbk_pg48.html]
+</etd>
+</etr>
+<etr>
+	<etd>-:-:67.218.116.166:Mozilla/5.0 :Twiceler-0.9 http://www.cuil.com/twiceler/robot.html</etd>
+	<etd>0</etd>
+	<etd>[/yrbk_pg63.html]
+</etd>
+</etr>
+<etr>
+	<etd>-:-:66.249.67.132:Googlebot/2.1:+http://www.google.com/bot.html</etd>
+	<etd>0</etd>
+	<etd>[/yrbk_pg68.html]
+</etd>
+</etr>
+<etr>
+	<etd>-:-:207.46.12.123:MSIE 7.0:Windows NT 5.1;  SLCC1;  .NET CLR 1.1.4325;  .NET CLR 2.0.40607;  .NET CLR 3.0.04506.648</etd>
+	<etd>0</etd>
+	<etd>[/yrbk_pg21.html]
+</etd>
+</etr>
+<etr>
+	<etd>-:-:207.46.195.234:msnbot/2.0b :+http://search.msn.com/msnbot.htm</etd>
+	<etd>0</etd>
+	<etd>[/yrbk_pg28.html]
+</etd>
+</etr>
+
+</etable>
+
+
+
+
+Week of 6/6/2010 to 6/12/2010: Top 
+		4 of 
+		4 Trails Followed
+	
+
+<etable>
+	<eformat>
+	<eheading cols=5 numeric>Rank</eheading>
+	<eheading cols=38>Trail</eheading>
+	<eheading cols=12 numeric>Accesses</eheading>
+	<eheading cols=20>Minutes</eheading>
+	</eformat>
+
+<etr>
+	<etd>1</etd>
+	<etd>
+	[/yearbook.html]
+[/favicon.ico]
+[/yrbk_pg1.html]
+[/yrbk_pg2.html]
+[/yrbk_pg62.html]
+[/yrbk_pg63.html]
+[/yrbk_pg61.html]
+[/yrbk_pg57.html]
+[/]
+[/reunion.html]
+[/where.html]
+[/missing_people.html]
+[/yrbk_pg9.html]
+		
+	</etd>
+	<etd>1</etd>
+	<etd>6.00</etd>
+</etr>
+<etr>
+	<etd>2</etd>
+	<etd>
+	[/]
+[/contact.html]
+[/missing_people.html]
+[/reunion.html]
+[/where.html]
+[/yearbook.html]
+[/yrbk_pg1.html]
+[/yrbk_pg10.html]
+		
+	</etd>
+	<etd>1</etd>
+	<etd>0.00</etd>
+</etr>
+<etr>
+	<etd>3</etd>
+	<etd>
+	[http://www.google.com/search]
+[/missing_people.html]
+[/favicon.ico]
+		
+	</etd>
+	<etd>1</etd>
+	<etd>0.00</etd>
+</etr>
+<etr>
+	<etd>4</etd>
+	<etd>
+	[/]
+[/contact.html]
+[/reunion.html]
+[/missing_people.html]
+[/where.html]
+[/yearbook.html]
+[/]
+[/yrbk_pg1.html]
+[/yrbk_pg2.html]
+[/yrbk_pg3.html]
+		
+	</etd>
+	<etd>1</etd>
+	<etd>0.00</etd>
+</etr>
+
+</etable>
+
+
+
+Week of 6/6/2010 to 6/12/2010: Top 
+		3 of 
+		3 File Types (Extensions)
+	<br>
+
+Sorted by Access Count<br>
+
+
+Individual file types as determined by file extensions. All URLs that
+do not contain an extension are counted as directories.<br>
+
+
+<etable>
+	<eformat>
+	<eheading cols=5 numeric>Rank</eheading>
+	<eheading cols=20>Type</eheading>
+	<eheading cols=12 numeric>Accesses</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	<eheading cols=12 numeric>Bytes</eheading>
+	<!-- <eheading cols=6 numeric>%</eheading> -->
+	</eformat>
+
+<etr>
+	<etd>1</etd>
+	<etd>
+	html		
+	</etd>
+	<etd>70</etd>
+	<!-- <etd>63.64</etd> -->
+	<etd>1,049,073</etd>
+	<!-- <etd>83.71</etd> -->
+</etr>
+<etr>
+	<etd>2</etd>
+	<etd>
+	Directory (folder)		
+	</etd>
+	<etd>36</etd>
+	<!-- <etd>32.73</etd> -->
+	<etd>198,520</etd>
+	<!-- <etd>15.84</etd> -->
+</etr>
+<etr>
+	<etd>3</etd>
+	<etd>
+	ico		
+	</etd>
+	<etd>4</etd>
+	<!-- <etd>3.64</etd> -->
+	<etd>5,624</etd>
+	<!-- <etd>0.45</etd> -->
+</etr>
+
+</etable>
+
+
+
+
+
+
