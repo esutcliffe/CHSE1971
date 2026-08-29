@@ -1,5 +1,5 @@
 {
-  "title": "CHSE Class of 1971 \u00b7 Reunions",
+  "title": "CHSE Class of 1971 · Reunions",
   "count": 11,
   "reunions": [
     {
@@ -9,7 +9,9 @@
       "date": "1976",
       "detail": "Probably Evelyn's, West Warwick",
       "href": "reunion5.htm",
-      "has_page": true
+      "has_page": true,
+      "photos_href": "photos-5.html",
+      "photo_count": 1
     },
     {
       "n": 10,
@@ -18,7 +20,9 @@
       "date": "November 1981",
       "detail": "Quonset Officers Club, North Kingstown",
       "href": "reunion10.htm",
-      "has_page": true
+      "has_page": true,
+      "photos_href": "photos-10.html",
+      "photo_count": 3
     },
     {
       "n": 15,
@@ -27,7 +31,9 @@
       "date": "1986",
       "detail": "Probably Quonset O Club",
       "href": "reunion15.htm",
-      "has_page": true
+      "has_page": true,
+      "photos_href": "photos-15.html",
+      "photo_count": 3
     },
     {
       "n": 20,
@@ -36,7 +42,9 @@
       "date": "1991",
       "detail": "Newport Islander Doubletree",
       "href": "reunion20.htm",
-      "has_page": true
+      "has_page": true,
+      "photos_href": "photos-20.html",
+      "photo_count": 1
     },
     {
       "n": 25,
@@ -45,7 +53,9 @@
       "date": "1996",
       "detail": "Westin Hotel, Providence",
       "href": "reunion25.htm",
-      "has_page": true
+      "has_page": true,
+      "photos_href": "photos-25.html",
+      "photo_count": 1
     },
     {
       "n": 30,
@@ -54,7 +64,9 @@
       "date": "2001",
       "detail": "No reunion held",
       "href": null,
-      "has_page": false
+      "has_page": false,
+      "photos_href": null,
+      "photo_count": 0
     },
     {
       "n": 31,
@@ -63,16 +75,20 @@
       "date": "September 29, 2002",
       "detail": "Goddard Park",
       "href": "reunion31.htm",
-      "has_page": true
+      "has_page": true,
+      "photos_href": "photos-31.html",
+      "photo_count": 3
     },
     {
       "n": 32,
       "label": "32nd Reunion",
       "year": 2003,
       "date": "September 13, 2003",
-      "detail": "Hotel Viking, Newport \u00b7 5-O Birthday Party",
+      "detail": "Hotel Viking, Newport · 5-O Birthday Party",
       "href": "reunion32.htm",
-      "has_page": true
+      "has_page": true,
+      "photos_href": "photos-32.html",
+      "photo_count": 111
     },
     {
       "n": 35,
@@ -81,7 +97,9 @@
       "date": "Saturday, September 9, 2006",
       "detail": "Yawgoo Bakes, Slocum, RI",
       "href": "reunion35.htm",
-      "has_page": true
+      "has_page": true,
+      "photos_href": "photos-35.html",
+      "photo_count": 31
     },
     {
       "n": 40,
@@ -90,16 +108,20 @@
       "date": "Friday, June 10, 2011",
       "detail": "Bonnet Shores Beach Club",
       "href": "reunion40.htm",
-      "has_page": true
+      "has_page": true,
+      "photos_href": "photos-40.html",
+      "photo_count": 39
     },
     {
       "n": 50,
       "label": "50th Reunion",
       "year": 2022,
       "date": "Saturday, June 25, 2022",
-      "detail": "Bonnet Shores Beach Club \u00b7 weekend also included golf/tour and Goddard Park",
+      "detail": "Bonnet Shores Beach Club · weekend also included golf/tour and Goddard Park",
       "href": "reunion50.htm",
-      "has_page": true
+      "has_page": true,
+      "photos_href": "photos-50.html",
+      "photo_count": 37
     }
   ]
 }
