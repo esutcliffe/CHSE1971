@@ -1,6 +1,6 @@
 {
   "title": "CHSE Class of 1971 · Reunions",
-  "count": 11,
+  "count": 12,
   "reunions": [
     {
       "n": 5,
@@ -122,6 +122,17 @@
       "has_page": true,
       "photos_href": "photos-50.html",
       "photo_count": 37
+    },
+    {
+      "n": 55,
+      "label": "55th Reunion",
+      "year": 2026,
+      "date": "Friday, August 28, 2026",
+      "detail": "Chelo's, Cranston, RI",
+      "href": "reunion55.html",
+      "has_page": true,
+      "photos_href": null,
+      "photo_count": 0
     }
   ]
 }
