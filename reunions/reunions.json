@@ -7,7 +7,7 @@
       "label": "5th Reunion",
       "year": 1976,
       "date": "1976",
-      "detail": "First class reunion",
+      "detail": "Probably Evelyn's, West Warwick",
       "href": "reunion5.htm",
       "has_page": true
     },
@@ -25,7 +25,7 @@
       "label": "15th Reunion",
       "year": 1986,
       "date": "1986",
-      "detail": "",
+      "detail": "Probably Quonset O Club",
       "href": "reunion15.htm",
       "has_page": true
     },
@@ -34,7 +34,7 @@
       "label": "20th Reunion",
       "year": 1991,
       "date": "1991",
-      "detail": "",
+      "detail": "Newport Islander Doubletree",
       "href": "reunion20.htm",
       "has_page": true
     },
@@ -60,8 +60,8 @@
       "n": 31,
       "label": "31st Mini-Reunion",
       "year": 2002,
-      "date": "2002",
-      "detail": "Mini-reunion",
+      "date": "September 29, 2002",
+      "detail": "Goddard Park",
       "href": "reunion31.htm",
       "has_page": true
     },
@@ -70,7 +70,7 @@
       "label": "32nd Reunion",
       "year": 2003,
       "date": "September 13, 2003",
-      "detail": "5-O Birthday Party",
+      "detail": "Hotel Viking, Newport \u00b7 5-O Birthday Party",
       "href": "reunion32.htm",
       "has_page": true
     },
@@ -88,7 +88,7 @@
       "label": "40th Reunion",
       "year": 2011,
       "date": "Friday, June 10, 2011",
-      "detail": "",
+      "detail": "Bonnet Shores Beach Club",
       "href": "reunion40.htm",
       "has_page": true
     },
@@ -96,8 +96,8 @@
       "n": 50,
       "label": "50th Reunion",
       "year": 2022,
-      "date": "June 24\u201326, 2022",
-      "detail": "Weekend events including Goddard Park",
+      "date": "Saturday, June 25, 2022",
+      "detail": "Bonnet Shores Beach Club \u00b7 weekend also included golf/tour and Goddard Park",
       "href": "reunion50.htm",
       "has_page": true
     }
