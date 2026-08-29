@@ -1,6 +1,6 @@
 {
   "title": "CHSE Class of 1971 · Reunions",
-  "count": 12,
+  "count": 13,
   "reunions": [
     {
       "n": 5,
@@ -122,6 +122,17 @@
       "has_page": true,
       "photos_href": "photos-50.html",
       "photo_count": 37
+    },
+    {
+      "n": 71,
+      "label": "71st Birthday Party",
+      "year": 2024,
+      "date": "Saturday, September 7, 2024",
+      "detail": "Notes and photos to come",
+      "href": "reunion71.html",
+      "has_page": true,
+      "photos_href": null,
+      "photo_count": 0
     },
     {
       "n": 55,
