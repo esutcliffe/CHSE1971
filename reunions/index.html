@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHSE Class of 1971 · Reunions</title>
+<style>
+  :root {
+    --navy: #1f3a5f;
+    --bg: #f7f5f1;
+    --card: #ffffff;
+    --line: #d0cbc2;
+    --muted: #6b665e;
+    --text: #111111;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    background: var(--navy);
+    color: #fff;
+    padding: 20px 24px 18px;
+  }
+  header .school { margin: 0 0 4px; opacity: .85; font-size: .9rem; }
+  header h1 { margin: 0; font-size: clamp(1.35rem, 3vw, 1.75rem); font-weight: 700; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 24px 24px 64px; }
+  .intro {
+    color: var(--muted);
+    font-size: .95rem;
+    margin: 0 0 20px;
+    line-height: 1.45;
+  }
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid #e2ddd4;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: grid;
+    grid-template-columns: 72px 1fr auto;
+    gap: 12px 16px;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  a.card:hover, a.card:focus {
+    border-color: var(--navy);
+    box-shadow: 0 2px 8px rgba(31,58,95,.08);
+    outline: none;
+  }
+  .card.disabled {
+    opacity: .72;
+    cursor: default;
+  }
+  .badge {
+    width: 72px;
+    height: 72px;
+    border-radius: 8px;
+    background: #e8eef6;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+  .card.disabled .badge {
+    background: #eceae6;
+    color: #8a857c;
+  }
+  .body { min-width: 0; }
+  .label {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 0 0 2px;
+  }
+  .date {
+    margin: 0;
+    color: #333;
+    font-size: .9rem;
+  }
+  .detail {
+    margin: 4px 0 0;
+    color: var(--muted);
+    font-size: .82rem;
+  }
+  .go {
+    color: var(--navy);
+    font-weight: 700;
+    font-size: .85rem;
+    white-space: nowrap;
+  }
+  .card.disabled .go { color: var(--muted); font-weight: 500; }
+  footer {
+    margin-top: 36px;
+    text-align: center;
+    color: var(--muted);
+    font-size: .8rem;
+  }
+  @media (max-width: 560px) {
+    .card {
+      grid-template-columns: 56px 1fr;
+    }
+    .badge { width: 56px; height: 56px; font-size: 1.05rem; }
+    .go { grid-column: 2; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <p class="school">Cranston High School East</p>
+  <h1>Class of 1971 · Reunions</h1>
+</header>
+<div class="wrap">
+  <p class="intro">Class reunions on record. Each entry will open its own reunion page (photos and notes from the existing site for now).</p>
+  <ul id="list" class="list"></ul>
+  <footer>CHSE Class of 1971</footer>
+</div>
+<script>
+(async function () {
+  const list = document.getElementById("list");
+  const res = await fetch("reunions.json");
+  const data = await res.json();
+
+  function ordinalOf(n) {
+    const v = n % 100;
+    if (v >= 11 && v <= 13) return n + "th";
+    switch (n % 10) {
+      case 1: return n + "st";
+      case 2: return n + "nd";
+      case 3: return n + "rd";
+      default: return n + "th";
+    }
+  }
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, ch => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+    })[ch]);
+  }
+  function escapeAttr(s) { return escapeHtml(s); }
+
+  list.innerHTML = (data.reunions || []).map(r => {
+    const detail = r.detail ? `<p class="detail">${escapeHtml(r.detail)}</p>` : "";
+    const ordinal = ordinalOf(r.n);
+    if (r.has_page && r.href) {
+      return `<li><a class="card" href="${escapeAttr(r.href)}">
+        <div class="badge">${escapeHtml(ordinal)}</div>
+        <div class="body">
+          <p class="label">${escapeHtml(r.label)}</p>
+          <p class="date">${escapeHtml(r.date || String(r.year || ""))}</p>
+          ${detail}
+        </div>
+        <div class="go">View →</div>
+      </a></li>`;
+    }
+    return `<li><div class="card disabled">
+      <div class="badge">${escapeHtml(ordinal)}</div>
+      <div class="body">
+        <p class="label">${escapeHtml(r.label)}</p>
+        <p class="date">${escapeHtml(r.date || String(r.year || ""))}</p>
+        ${detail}
+      </div>
+      <div class="go">No event</div>
+    </div></li>`;
+  }).join("");
+})();
+</script>
+</body>
+</html>
