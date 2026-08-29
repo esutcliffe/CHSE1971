@@ -101,7 +101,18 @@
     font-weight: 700;
     font-size: .85rem;
     white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
   }
+  .go a {
+    color: var(--navy);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .go a:hover, .go a:focus { text-decoration: underline; outline: none; }
+  .go a.photos { color: #2f5f8a; }
   .card.disabled .go { color: var(--muted); font-weight: 500; }
   footer {
     margin-top: 36px;
@@ -124,7 +135,7 @@
   <h1>Class of 1971 · Reunions</h1>
 </header>
 <div class="wrap">
-  <p class="intro">Class reunions on record. Each entry will open its own reunion page (photos and notes from the existing site for now).</p>
+  <p class="intro">Class reunions on record. Open a reunion page for notes, or Photos for a full gallery.</p>
   <ul id="list" class="list"></ul>
   <footer>CHSE Class of 1971</footer>
 </div>
@@ -154,16 +165,22 @@
   list.innerHTML = (data.reunions || []).map(r => {
     const detail = r.detail ? `<p class="detail">${escapeHtml(r.detail)}</p>` : "";
     const ordinal = ordinalOf(r.n);
+    const photos = (r.photos_href && r.photo_count)
+      ? `<a class="photos" href="${escapeAttr(r.photos_href)}">Photos (${escapeHtml(r.photo_count)}) →</a>`
+      : "";
     if (r.has_page && r.href) {
-      return `<li><a class="card" href="${escapeAttr(r.href)}">
+      return `<li><div class="card">
         <div class="badge">${escapeHtml(ordinal)}</div>
         <div class="body">
           <p class="label">${escapeHtml(r.label)}</p>
           <p class="date">${escapeHtml(r.date || String(r.year || ""))}</p>
           ${detail}
         </div>
-        <div class="go">View →</div>
-      </a></li>`;
+        <div class="go">
+          <a href="${escapeAttr(r.href)}">View →</a>
+          ${photos}
+        </div>
+      </div></li>`;
     }
     return `<li><div class="card disabled">
       <div class="badge">${escapeHtml(ordinal)}</div>
