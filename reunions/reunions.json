@@ -1,0 +1,105 @@
+{
+  "title": "CHSE Class of 1971 \u00b7 Reunions",
+  "count": 11,
+  "reunions": [
+    {
+      "n": 5,
+      "label": "5th Reunion",
+      "year": 1976,
+      "date": "1976",
+      "detail": "First class reunion",
+      "href": "reunion5.htm",
+      "has_page": true
+    },
+    {
+      "n": 10,
+      "label": "10th Reunion",
+      "year": 1981,
+      "date": "November 1981",
+      "detail": "Quonset Officers Club, North Kingstown",
+      "href": "reunion10.htm",
+      "has_page": true
+    },
+    {
+      "n": 15,
+      "label": "15th Reunion",
+      "year": 1986,
+      "date": "1986",
+      "detail": "",
+      "href": "reunion15.htm",
+      "has_page": true
+    },
+    {
+      "n": 20,
+      "label": "20th Reunion",
+      "year": 1991,
+      "date": "1991",
+      "detail": "",
+      "href": "reunion20.htm",
+      "has_page": true
+    },
+    {
+      "n": 25,
+      "label": "25th Reunion",
+      "year": 1996,
+      "date": "1996",
+      "detail": "Westin Hotel, Providence",
+      "href": "reunion25.htm",
+      "has_page": true
+    },
+    {
+      "n": 30,
+      "label": "30th Reunion",
+      "year": 2001,
+      "date": "2001",
+      "detail": "No reunion held",
+      "href": null,
+      "has_page": false
+    },
+    {
+      "n": 31,
+      "label": "31st Mini-Reunion",
+      "year": 2002,
+      "date": "2002",
+      "detail": "Mini-reunion",
+      "href": "reunion31.htm",
+      "has_page": true
+    },
+    {
+      "n": 32,
+      "label": "32nd Reunion",
+      "year": 2003,
+      "date": "September 13, 2003",
+      "detail": "5-O Birthday Party",
+      "href": "reunion32.htm",
+      "has_page": true
+    },
+    {
+      "n": 35,
+      "label": "35th Reunion",
+      "year": 2006,
+      "date": "Saturday, September 9, 2006",
+      "detail": "Yawgoo Bakes, Slocum, RI",
+      "href": "reunion35.htm",
+      "has_page": true
+    },
+    {
+      "n": 40,
+      "label": "40th Reunion",
+      "year": 2011,
+      "date": "Friday, June 10, 2011",
+      "detail": "",
+      "href": "reunion40.htm",
+      "has_page": true
+    },
+    {
+      "n": 50,
+      "label": "50th Reunion",
+      "year": 2022,
+      "date": "June 24\u201326, 2022",
+      "detail": "Weekend events including Goddard Park",
+      "href": "reunion50.htm",
+      "has_page": true
+    }
+  ]
+}
