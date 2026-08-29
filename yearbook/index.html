@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHSE Class of 1971 · Yearbook</title>
+<style>
+  :root {
+    --navy: #1f3a5f;
+    --navy-2: #2a4d7a;
+    --bg: #f7f5f1;
+    --card: #ffffff;
+    --line: #d0cbc2;
+    --muted: #6b665e;
+    --text: #111111;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    background: var(--navy);
+    color: #fff;
+    padding: 20px 24px 18px;
+  }
+  header .school { margin: 0 0 4px; opacity: .85; font-size: .9rem; }
+  header h1 { margin: 0; font-size: clamp(1.35rem, 3vw, 1.75rem); font-weight: 700; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 20px 24px 64px; }
+  .toolbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .search {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+  }
+  .search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
+  .meta { color: var(--muted); font-size: .85rem; white-space: nowrap; }
+  .az {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 6px;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    margin-bottom: 8px;
+  }
+  .az a {
+    flex: 1 1 1.5rem;
+    min-width: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: #555;
+    font-weight: 700;
+    font-size: .82rem;
+    padding: 7px 2px;
+    border-radius: 4px;
+  }
+  .az a:hover, .az a:focus { background: var(--navy); color: #fff; }
+  .az a.empty { color: #bbb; pointer-events: none; font-weight: 500; }
+  .az a.active { background: var(--navy); color: #fff; }
+  .letter {
+    margin: 28px 0 12px;
+    font-size: 1.45rem;
+    color: var(--navy);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 4px;
+    scroll-margin-top: 56px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .toolbar { grid-template-columns: 1fr; }
+    .meta { text-align: left; }
+    .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid #e2ddd4;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  .card img {
+    width: 100%;
+    aspect-ratio: 13 / 15;
+    object-fit: cover;
+    display: block;
+    background: #e8e4dc;
+  }
+  .name { font-weight: 700; margin: 8px 0 2px; font-size: .92rem; line-height: 1.25; }
+  .address { color: #444; font-size: .78rem; margin-bottom: 2px; }
+  .activities { color: #333; font-size: .72rem; line-height: 1.35; }
+  .no-results {
+    display: none;
+    margin: 40px 0;
+    text-align: center;
+    color: var(--muted);
+  }
+  .status {
+    color: var(--muted);
+    font-size: .9rem;
+    padding: 40px 0;
+    text-align: center;
+  }
+  footer {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--muted);
+    font-size: .8rem;
+  }
+</style>
+</head>
+<body>
+<header>
+  <p class="school">Cranston High School East</p>
+  <h1>Class of 1971 · Yearbook</h1>
+</header>
+<div class="wrap">
+  <div class="toolbar">
+    <input id="q" class="search" type="search" placeholder="Search classmates…" autocomplete="off">
+    <div id="meta" class="meta"></div>
+  </div>
+  <nav id="az" class="az" aria-label="Jump to letter"></nav>
+  <div id="status" class="status">Loading classmates…</div>
+  <div id="noresults" class="no-results">No classmates match that search.</div>
+  <div id="app"></div>
+  <footer>Senior portraits from the 1971 yearbook · names without photos use a blank icon</footer>
+</div>
+<script>
+(async function () {
+  const app = document.getElementById("app");
+  const az = document.getElementById("az");
+  const meta = document.getElementById("meta");
+  const status = document.getElementById("status");
+  const noresults = document.getElementById("noresults");
+  const q = document.getElementById("q");
+  const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
+  let classmates = [];
+  try {
+    const res = await fetch("classmates-slim.json");
+    if (!res.ok) throw new Error("Could not load classmates-slim.json");
+    const data = await res.json();
+    classmates = data.classmates || [];
+    status.style.display = "none";
+  } catch (err) {
+    status.textContent = "Could not load the classmate list.";
+    console.error(err);
+    return;
+  }
+
+  const byLetter = {};
+  for (const L of LETTERS) byLetter[L] = [];
+  for (const c of classmates) {
+    const L = ((c.last || "?").charAt(0) || "?").toUpperCase();
+    if (!byLetter[L]) byLetter[L] = [];
+    byLetter[L].push(c);
+  }
+
+  function renderAz(active) {
+    az.innerHTML = LETTERS.map(L => {
+      const empty = !(byLetter[L] && byLetter[L].length);
+      const cls = [empty ? "empty" : "", active === L ? "active" : ""].filter(Boolean).join(" ");
+      return empty
+        ? `<a class="${cls}" aria-disabled="true">${L}</a>`
+        : `<a href="#letter-${L}" class="${cls}" data-letter="${L}">${L}</a>`;
+    }).join("");
+  }
+
+  function cardHTML(c) {
+    const acts = c.activities
+      ? `<div class="activities">${escapeHtml(c.activities)}</div>`
+      : "";
+    const addr = c.address
+      ? `<div class="address">${escapeHtml(c.address)}</div>`
+      : "";
+    return `<article class="card">
+      <img src="${escapeAttr(c.file)}" alt="${escapeAttr(c.caption)}" loading="lazy" width="130" height="150">
+      <div class="name">${escapeHtml(c.caption)}</div>
+      ${addr}
+      ${acts}
+    </article>`;
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, ch => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    })[ch]);
+  }
+  function escapeAttr(s) { return escapeHtml(s); }
+
+  function render(filter) {
+    const query = (filter || "").trim().toLowerCase();
+    let shown = 0;
+    const parts = [];
+    for (const L of LETTERS) {
+      const rows = (byLetter[L] || []).filter(c => {
+        if (!query) return true;
+        const hay = [c.caption, c.first, c.last, c.address, c.activities].join(" ").toLowerCase();
+        return hay.includes(query);
+      });
+      if (!rows.length) continue;
+      shown += rows.length;
+      parts.push(`<h2 class="letter" id="letter-${L}">${L}</h2>`);
+      parts.push(`<div class="grid">${rows.map(cardHTML).join("")}</div>`);
+    }
+    app.innerHTML = parts.join("");
+    meta.textContent = query
+      ? `${shown} match${shown === 1 ? "" : "es"} of ${classmates.length}`
+      : `${classmates.length} classmates`;
+    noresults.style.display = shown ? "none" : "block";
+    renderAz(null);
+  }
+
+  az.addEventListener("click", (e) => {
+    const a = e.target.closest("a[data-letter]");
+    if (!a) return;
+    renderAz(a.dataset.letter);
+  });
+
+  q.addEventListener("input", () => render(q.value));
+  render("");
+})();
+</script>
+</body>
+</html>
