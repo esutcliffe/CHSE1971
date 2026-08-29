@@ -57,6 +57,12 @@
     margin: 0 0 12px;
   }
   .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend .ex {
+    font-weight: 700;
+  }
+  .legend .ex.in_touch { color: var(--in-touch); }
+  .legend .ex.missing { color: var(--missing); }
+  .legend .ex.deceased { color: var(--deceased); }
   .az {
     display: flex;
     flex-wrap: wrap;
@@ -120,55 +126,28 @@
     display: block;
     background: #e8e4dc;
   }
-  .name-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 7px;
+  .name {
+    font-weight: 700;
+    font-size: .92rem;
+    line-height: 1.25;
     margin: 8px 0 2px;
+    color: var(--text);
   }
-  .status-dot {
-    flex: 0 0 auto;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-top: 5px;
+  a.name-link {
+    font-weight: 700;
+    font-size: .92rem;
+    line-height: 1.25;
+    margin: 8px 0 2px;
     text-decoration: none;
-    position: relative;
+    display: inline-block;
   }
-  .status-dot.in_touch { background: var(--in-touch); }
-  .status-dot.missing { background: var(--missing); }
-  .status-dot.deceased { background: var(--deceased); }
-  .status-dot:hover, .status-dot:focus {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
+  a.name-link:hover, a.name-link:focus {
+    text-decoration: underline;
+    outline: none;
   }
-  .status-dot.in_touch:hover, .status-dot.in_touch:focus { color: var(--in-touch); }
-  .status-dot.missing:hover, .status-dot.missing:focus { color: var(--missing); }
-  .status-dot.deceased:hover, .status-dot.deceased:focus { color: var(--deceased); }
-  .status-dot::after {
-    content: attr(data-label);
-    position: absolute;
-    left: 14px;
-    top: -4px;
-    white-space: nowrap;
-    background: #fff;
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    padding: 2px 6px;
-    font-size: .68rem;
-    color: #333;
-    box-shadow: 0 1px 3px rgba(0,0,0,.08);
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(2px);
-    transition: opacity .12s ease, transform .12s ease;
-    z-index: 3;
-  }
-  .status-dot:hover::after, .status-dot:focus::after {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .name { font-weight: 700; font-size: .92rem; line-height: 1.25; }
+  a.name-link.in_touch { color: var(--in-touch); }
+  a.name-link.missing { color: var(--missing); }
+  a.name-link.deceased { color: var(--deceased); }
   .address { color: #444; font-size: .78rem; margin-bottom: 2px; }
   .activities { color: #333; font-size: .72rem; line-height: 1.35; }
   .no-results {
@@ -189,12 +168,6 @@
     color: var(--muted);
     font-size: .8rem;
   }
-  .swatch {
-    width: 8px; height: 8px; border-radius: 50%; display: inline-block;
-  }
-  .swatch.in_touch { background: var(--in-touch); }
-  .swatch.missing { background: var(--missing); }
-  .swatch.deceased { background: var(--deceased); }
 </style>
 </head>
 <body>
@@ -208,15 +181,15 @@
     <div id="meta" class="meta"></div>
   </div>
   <div class="legend" aria-label="Status legend">
-    <span><i class="swatch in_touch"></i> In touch (bio)</span>
-    <span><i class="swatch missing"></i> Missing</span>
-    <span><i class="swatch deceased"></i> Deceased (obituary)</span>
+    <span><span class="ex in_touch">Name</span> In touch (bio)</span>
+    <span><span class="ex missing">Name</span> Missing</span>
+    <span><span class="ex deceased">Name</span> Deceased (obituary)</span>
   </div>
   <nav id="az" class="az" aria-label="Jump to letter"></nav>
   <div id="status" class="status">Loading classmates…</div>
   <div id="noresults" class="no-results">No classmates match that search.</div>
   <div id="app"></div>
-  <footer>Senior portraits from the 1971 yearbook · quiet status marks link to bio, missing list, or obituary when known</footer>
+  <footer>Senior portraits from the 1971 yearbook · colored names link to bio, missing list, or obituary when known</footer>
 </div>
 <script>
 (async function () {
@@ -228,9 +201,9 @@
   const q = document.getElementById("q");
   const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
   const STATUS_LABEL = {
-    in_touch: "In touch",
-    missing: "Missing",
-    deceased: "Deceased"
+    in_touch: "In touch — open bio",
+    missing: "Missing — open list",
+    deceased: "Deceased — open obituary"
   };
 
   let classmates = [];
@@ -264,12 +237,14 @@
     }).join("");
   }
 
-  function statusMark(c) {
+  function nameHTML(c) {
     const st = c.status;
     const href = c.status_href;
-    if (!st || !href || !STATUS_LABEL[st]) return "";
     const label = STATUS_LABEL[st];
-    return `<a class="status-dot ${st}" href="${escapeAttr(href)}" data-label="${escapeAttr(label)}" title="${escapeAttr(label)}" aria-label="${escapeAttr(label + ": " + c.caption)}"></a>`;
+    if (st && href && label) {
+      return `<a class="name-link ${st}" href="${escapeAttr(href)}" title="${escapeAttr(label)}">${escapeHtml(c.caption)}</a>`;
+    }
+    return `<div class="name">${escapeHtml(c.caption)}</div>`;
   }
 
   function cardHTML(c) {
@@ -281,10 +256,7 @@
       : "";
     return `<article class="card">
       <img src="${escapeAttr(c.file)}" alt="${escapeAttr(c.caption)}" loading="lazy" width="130" height="150">
-      <div class="name-row">
-        ${statusMark(c)}
-        <div class="name">${escapeHtml(c.caption)}</div>
-      </div>
+      ${nameHTML(c)}
       ${addr}
       ${acts}
     </article>`;
