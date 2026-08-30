@@ -51,12 +51,25 @@
   .legend {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px 18px;
+    align-items: center;
+    gap: 6px 0;
     color: var(--muted);
     font-size: .78rem;
     margin: 0 0 12px;
   }
-  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
+  .legend-item:not(:last-child)::after {
+    content: "·";
+    margin: 0 10px 0 12px;
+    color: #9a948a;
+    font-weight: 400;
+  }
+  .legend-label { color: var(--muted); }
   .legend .ex {
     font-weight: 700;
   }
@@ -90,13 +103,29 @@
   .az a:hover, .az a:focus { background: var(--navy); color: #fff; }
   .az a.empty { color: #bbb; pointer-events: none; font-weight: 500; }
   .az a.active { background: var(--navy); color: #fff; }
-  .letter {
+  .letter-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 16px;
+    flex-wrap: wrap;
     margin: 28px 0 12px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 6px;
+    scroll-margin-top: 56px;
+  }
+  .letter {
+    margin: 0;
     font-size: 1.45rem;
     color: var(--navy);
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 4px;
-    scroll-margin-top: 56px;
+    line-height: 1.1;
+    min-width: 1.4rem;
+  }
+  .legend-compact {
+    margin: 0;
+    font-size: .68rem;
+    flex: 1 1 auto;
+    justify-content: flex-end;
   }
   .grid {
     display: grid;
@@ -110,6 +139,7 @@
     .toolbar { grid-template-columns: 1fr; }
     .meta { text-align: left; }
     .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .legend-compact { justify-content: flex-start; }
   }
   .card {
     background: var(--card);
@@ -184,9 +214,9 @@
     <div id="meta" class="meta"></div>
   </div>
   <div class="legend" aria-label="Status legend">
-    <span><span class="ex in_touch">Name</span> In touch (bio)</span>
-    <span><span class="ex missing">Name</span> Missing</span>
-    <span><span class="ex deceased">Name</span> Deceased (in memoriam)</span>
+    <span class="legend-item"><span class="ex in_touch">Name</span><span class="legend-label">In touch (bio)</span></span>
+    <span class="legend-item"><span class="ex missing">Name</span><span class="legend-label">Missing</span></span>
+    <span class="legend-item"><span class="ex deceased">Name</span><span class="legend-label">Deceased (in memoriam)</span></span>
   </div>
   <nav id="az" class="az" aria-label="Jump to letter"></nav>
   <div id="status" class="status">Loading classmates…</div>
@@ -208,6 +238,11 @@
     missing: "Missing — open list",
     deceased: "Deceased — in memoriam"
   };
+  const LEGEND_COMPACT = `<div class="legend legend-compact" aria-hidden="true">
+      <span class="legend-item"><span class="ex in_touch">Name</span><span class="legend-label">In touch (bio)</span></span>
+      <span class="legend-item"><span class="ex missing">Name</span><span class="legend-label">Missing</span></span>
+      <span class="legend-item"><span class="ex deceased">Name</span><span class="legend-label">Deceased (in memoriam)</span></span>
+    </div>`;
 
   let classmates = [];
   try {
@@ -286,7 +321,7 @@
       });
       if (!rows.length) continue;
       shown += rows.length;
-      parts.push(`<h2 class="letter" id="letter-${L}">${L}</h2>`);
+      parts.push(`<div class="letter-row" id="letter-${L}"><h2 class="letter">${L}</h2>${LEGEND_COMPACT}</div>`);
       parts.push(`<div class="grid">${rows.map(cardHTML).join("")}</div>`);
     }
     app.innerHTML = parts.join("");
