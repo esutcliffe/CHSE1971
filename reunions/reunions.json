@@ -1,5 +1,5 @@
 {
-  "title": "CHSE Class of 1971 · Reunions",
+  "title": "CHSE Class of 1971 \u00b7 Reunions",
   "count": 13,
   "reunions": [
     {
@@ -84,7 +84,7 @@
       "label": "32nd Reunion",
       "year": 2003,
       "date": "September 13, 2003",
-      "detail": "Hotel Viking, Newport · 5-O Birthday Party",
+      "detail": "Hotel Viking, Newport \u00b7 5-O Birthday Party",
       "href": "reunion32.htm",
       "has_page": true,
       "photos_href": "photos-32.html",
@@ -117,7 +117,7 @@
       "label": "50th Reunion",
       "year": 2022,
       "date": "Saturday, June 25, 2022",
-      "detail": "Bonnet Shores Beach Club · weekend also included golf/tour and Goddard Park",
+      "detail": "Bonnet Shores Beach Club \u00b7 weekend also included golf/tour and Goddard Park",
       "href": "reunion50.htm",
       "has_page": true,
       "photos_href": "photos-50.html",
@@ -139,11 +139,11 @@
       "label": "55th Reunion",
       "year": 2026,
       "date": "Friday, August 28, 2026",
-      "detail": "Chelo's, Cranston, RI",
+      "detail": "Chelo's, Cranston, RI \u00b7 CHSE school tour",
       "href": "reunion55.html",
       "has_page": true,
-      "photos_href": null,
-      "photo_count": 0
+      "photos_href": "photos-55.html",
+      "photo_count": 3
     }
   ]
 }
