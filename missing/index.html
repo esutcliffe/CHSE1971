@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CHSE Class of 1971 · Yearbook</title>
+<title>CHSE Class of 1971 · Missing classmates</title>
 <style>
   :root {
     --navy: #1f3a5f;
+    --navy-deep: #162a45;
     --bg: #f7f5f1;
     --card: #ffffff;
     --line: #d0cbc2;
     --muted: #6b665e;
     --text: #111111;
-    --in-touch: #0b8f45;
     --missing: #d97706;
     --deceased: #6d28d9;
   }
@@ -30,7 +30,17 @@
   }
   header .school { margin: 0 0 4px; opacity: .85; font-size: .9rem; }
   header h1 { margin: 0; font-size: clamp(1.35rem, 3vw, 1.75rem); font-weight: 700; }
-  .wrap { max-width: 1100px; margin: 0 auto; padding: 20px 24px 64px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 20px 24px 64px; }
+  .nav { margin: 0 0 16px; font-size: .88rem; }
+  .nav a { color: var(--navy); font-weight: 700; text-decoration: none; }
+  .nav a:hover, .nav a:focus { text-decoration: underline; outline: none; }
+  .nav span { color: var(--muted); }
+  .intro {
+    color: var(--muted);
+    font-size: .95rem;
+    margin: 0 0 18px;
+    line-height: 1.45;
+  }
   .toolbar {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -48,21 +58,6 @@
   }
   .search:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
   .meta { color: var(--muted); font-size: .85rem; white-space: nowrap; }
-  .legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px 18px;
-    color: var(--muted);
-    font-size: .78rem;
-    margin: 0 0 12px;
-  }
-  .legend span { display: inline-flex; align-items: center; gap: 6px; }
-  .legend .ex {
-    font-weight: 700;
-  }
-  .legend .ex.in_touch { color: var(--in-touch); }
-  .legend .ex.missing { color: var(--missing); }
-  .legend .ex.deceased { color: var(--deceased); }
   .az {
     display: flex;
     flex-wrap: wrap;
@@ -91,107 +86,78 @@
   .az a.empty { color: #bbb; pointer-events: none; font-weight: 500; }
   .az a.active { background: var(--navy); color: #fff; }
   .letter {
-    margin: 28px 0 12px;
+    margin: 28px 0 10px;
     font-size: 1.45rem;
     color: var(--navy);
     border-bottom: 1px solid var(--line);
     padding-bottom: 4px;
     scroll-margin-top: 56px;
   }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-  }
-  @media (max-width: 900px) {
-    .grid { grid-template-columns: repeat(3, 1fr); }
-  }
-  @media (max-width: 640px) {
-    .toolbar { grid-template-columns: 1fr; }
-    .meta { text-align: left; }
-    .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  }
-  .card {
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     background: var(--card);
     border: 1px solid #e2ddd4;
     border-radius: 8px;
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
   }
-  .card img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 13 / 15;
-    object-fit: contain;
-    object-position: center top;
-    display: block;
-    background: #e8e4dc;
+  .list li {
+    padding: 9px 14px;
+    border-top: 1px solid #efece7;
+    font-size: .95rem;
+    line-height: 1.35;
   }
-  .name {
-    font-weight: 700;
-    font-size: .92rem;
-    line-height: 1.25;
-    margin: 8px 0 2px;
-    color: var(--text);
-  }
-  a.name-link {
-    font-weight: 700;
-    font-size: .92rem;
-    line-height: 1.25;
-    margin: 8px 0 2px;
-    text-decoration: none;
-    display: inline-block;
-  }
-  a.name-link:hover, a.name-link:focus {
-    text-decoration: underline;
-    outline: none;
-  }
-  a.name-link.in_touch { color: var(--in-touch); }
-  a.name-link.missing { color: var(--missing); }
-  a.name-link.deceased { color: var(--deceased); }
-  .address { color: #444; font-size: .78rem; margin-bottom: 2px; }
-  .activities { color: #333; font-size: .72rem; line-height: 1.35; }
-  .no-results {
-    display: none;
-    margin: 40px 0;
-    text-align: center;
-    color: var(--muted);
-  }
+  .list li:first-child { border-top: none; }
+  .name { font-weight: 700; color: var(--missing); }
   .status {
     color: var(--muted);
     font-size: .9rem;
     padding: 40px 0;
     text-align: center;
   }
+  .no-results {
+    display: none;
+    margin: 40px 0;
+    text-align: center;
+    color: var(--muted);
+  }
   footer {
-    margin-top: 40px;
+    margin-top: 36px;
     text-align: center;
     color: var(--muted);
     font-size: .8rem;
+  }
+  footer a { color: var(--muted); }
+  @media (max-width: 640px) {
+    .toolbar { grid-template-columns: 1fr; }
+    .meta { text-align: left; }
   }
 </style>
 </head>
 <body>
 <header>
   <p class="school">Cranston High School East</p>
-  <h1>Class of 1971 · Yearbook</h1>
+  <h1>Class of 1971 · Missing classmates</h1>
 </header>
 <div class="wrap">
+  <p class="nav">
+    <a href="../">Home</a>
+    <span>·</span>
+    <a href="../yearbook/">Yearbook</a>
+    <span>·</span>
+    <a href="../deceased/">In memoriam</a>
+  </p>
+  <p class="intro">The class no longer has any valid contact information on these classmates. Names are listed as they appear in the yearbook (Last, First).</p>
   <div class="toolbar">
-    <input id="q" class="search" type="search" placeholder="Search classmates…" autocomplete="off">
+    <input id="q" class="search" type="search" placeholder="Search missing classmates…" autocomplete="off">
     <div id="meta" class="meta"></div>
-  </div>
-  <div class="legend" aria-label="Status legend">
-    <span><span class="ex in_touch">Name</span> In touch (bio)</span>
-    <span><span class="ex missing">Name</span> Missing</span>
-    <span><span class="ex deceased">Name</span> Deceased (in memoriam)</span>
   </div>
   <nav id="az" class="az" aria-label="Jump to letter"></nav>
   <div id="status" class="status">Loading classmates…</div>
   <div id="noresults" class="no-results">No classmates match that search.</div>
   <div id="app"></div>
-  <footer>Senior portraits from the 1971 yearbook · colored names link to bio, missing list, obituary, or in memoriam</footer>
+  <footer>CHSE Class of 1971 · <a href="../deceased/">In memoriam</a></footer>
 </div>
 <script>
 (async function () {
@@ -202,31 +168,33 @@
   const noresults = document.getElementById("noresults");
   const q = document.getElementById("q");
   const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-  const STATUS_LABEL = {
-    in_touch: "In touch — open bio",
-    missing: "Missing — open list",
-    deceased: "Deceased — in memoriam"
-  };
 
-  let classmates = [];
+  let people = [];
   try {
-    const res = await fetch("classmates-slim.json");
+    const res = await fetch("../yearbook/classmates-slim.json");
     if (!res.ok) throw new Error("Could not load classmates-slim.json");
     const data = await res.json();
-    classmates = data.classmates || [];
+    people = (data.classmates || []).filter(c => c.status === "missing");
+    people.sort((a, b) => (a.caption || "").localeCompare(b.caption || "", "en", { sensitivity: "base" }));
     status.style.display = "none";
   } catch (err) {
-    status.textContent = "Could not load the classmate list.";
+    status.textContent = "Could not load the missing classmates list.";
     console.error(err);
     return;
   }
 
   const byLetter = {};
   for (const L of LETTERS) byLetter[L] = [];
-  for (const c of classmates) {
+  for (const c of people) {
     const L = ((c.last || "?").charAt(0) || "?").toUpperCase();
     if (!byLetter[L]) byLetter[L] = [];
     byLetter[L].push(c);
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, ch => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    })[ch]);
   }
 
   function renderAz(active) {
@@ -239,40 +207,6 @@
     }).join("");
   }
 
-  function nameHTML(c) {
-    const st = c.status;
-    const href = c.status_href;
-    const label = (st === "deceased" && href && /Obituaries/i.test(href))
-      ? "Deceased — open obituary"
-      : STATUS_LABEL[st];
-    if (st && href && label) {
-      return `<a class="name-link ${st}" href="${escapeAttr(href)}" title="${escapeAttr(label)}">${escapeHtml(c.caption)}</a>`;
-    }
-    return `<div class="name">${escapeHtml(c.caption)}</div>`;
-  }
-
-  function cardHTML(c) {
-    const acts = c.activities
-      ? `<div class="activities">${escapeHtml(c.activities)}</div>`
-      : "";
-    const addr = c.address
-      ? `<div class="address">${escapeHtml(c.address)}</div>`
-      : "";
-    return `<article class="card">
-      <img src="${escapeAttr(c.file)}" alt="${escapeAttr(c.caption)}" loading="lazy" width="130" height="150">
-      ${nameHTML(c)}
-      ${addr}
-      ${acts}
-    </article>`;
-  }
-
-  function escapeHtml(s) {
-    return String(s).replace(/[&<>"']/g, ch => ({
-      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
-    })[ch]);
-  }
-  function escapeAttr(s) { return escapeHtml(s); }
-
   function render(filter) {
     const query = (filter || "").trim().toLowerCase();
     let shown = 0;
@@ -280,18 +214,20 @@
     for (const L of LETTERS) {
       const rows = (byLetter[L] || []).filter(c => {
         if (!query) return true;
-        const hay = [c.caption, c.first, c.last, c.address, c.activities, c.status].join(" ").toLowerCase();
+        const hay = [c.caption, c.first, c.last].join(" ").toLowerCase();
         return hay.includes(query);
       });
       if (!rows.length) continue;
       shown += rows.length;
       parts.push(`<h2 class="letter" id="letter-${L}">${L}</h2>`);
-      parts.push(`<div class="grid">${rows.map(cardHTML).join("")}</div>`);
+      parts.push(`<ul class="list">${rows.map(c =>
+        `<li><span class="name">${escapeHtml(c.caption)}</span></li>`
+      ).join("")}</ul>`);
     }
     app.innerHTML = parts.join("");
     meta.textContent = query
-      ? `${shown} match${shown === 1 ? "" : "es"} of ${classmates.length}`
-      : `${classmates.length} classmates`;
+      ? `${shown} match${shown === 1 ? "" : "es"} of ${people.length}`
+      : `${people.length} missing classmates`;
     noresults.style.display = shown ? "none" : "block";
     renderAz(null);
   }
