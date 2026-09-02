@@ -1,5 +1,5 @@
 {
-  "title": "CHSE Class of 1971 \u00b7 Reunion Photos",
+  "title": "CHSE Class of 1971 · Reunion Photos",
   "galleries": [
     {
       "n": 5,
@@ -315,13 +315,20 @@
       "n": 55,
       "label": "55th Reunion",
       "photos_page": "photos-55.html",
-      "count": 3,
+      "count": 10,
       "images": [
         "images/55/tour/IMG_0465.jpg",
         "images/55/tour/IMG_0466.jpg",
-        "images/55/tour/IMG_0460.jpg"
+        "images/55/tour/IMG_0460.jpg",
+        "images/55/jeanne/jeanne-01.jpg",
+        "images/55/jeanne/jeanne-02.jpg",
+        "images/55/jeanne/jeanne-03.jpg",
+        "images/55/jeanne/jeanne-04.jpg",
+        "images/55/jeanne/jeanne-05.jpg",
+        "images/55/jeanne/jeanne-06.jpg",
+        "images/55/jeanne/jeanne-07.jpg"
       ],
-      "note": "CHSE school tour, Aug 28, 2026 (Ernie Rheaume / Gail)"
+      "note": "CHSE school tour (Ernie Rheaume / Gail) and Chelo’s photos courtesy of Jeanne Rheaume, Aug 28, 2026"
     }
   ]
 }
