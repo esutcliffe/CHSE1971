@@ -180,6 +180,9 @@
   a.name-link.in_touch { color: var(--in-touch); }
   a.name-link.missing { color: var(--missing); }
   a.name-link.deceased { color: var(--deceased); }
+  .name.in_touch { color: var(--in-touch); }
+  .name.missing { color: var(--missing); }
+  .name.deceased { color: var(--deceased); }
   .address { color: #444; font-size: .78rem; margin-bottom: 2px; }
   .activities { color: #333; font-size: .72rem; line-height: 1.35; }
   .no-results {
@@ -217,7 +220,7 @@
   <div id="status" class="status">Loading classmates…</div>
   <div id="noresults" class="no-results">No classmates match that search.</div>
   <div id="app"></div>
-  <footer>Senior portraits from the 1971 yearbook · colored names link to bio, missing list, obituary, or in memoriam</footer>
+  <footer>Senior portraits from the 1971 yearbook · colored names show status; links go to bio, missing list, obituary, or in memoriam</footer>
 </div>
 <script>
 (async function () {
@@ -278,6 +281,9 @@
       : STATUS_LABEL[st];
     if (st && href && label) {
       return `<a class="name-link ${st}" href="${escapeAttr(href)}" title="${escapeAttr(label)}">${escapeHtml(c.caption)}</a>`;
+    }
+    if (st === "in_touch" || st === "missing" || st === "deceased") {
+      return `<div class="name ${st}">${escapeHtml(c.caption)}</div>`;
     }
     return `<div class="name">${escapeHtml(c.caption)}</div>`;
   }
