@@ -288,15 +288,18 @@
     return `<div class="name">${escapeHtml(c.caption)}</div>`;
   }
 
-  function cardHTML(c) {
+  function cardHTML(c, index) {
     const acts = c.activities
       ? `<div class="activities">${escapeHtml(c.activities)}</div>`
       : "";
     const addr = c.address
       ? `<div class="address">${escapeHtml(c.address)}</div>`
       : "";
+    const loading = index < 16
+      ? `loading="eager" fetchpriority="high" decoding="async"`
+      : `loading="lazy" decoding="async"`;
     return `<article class="card">
-      <img src="${escapeAttr(c.file)}" alt="${escapeAttr(c.caption)}" loading="lazy" width="130" height="150">
+      <img src="${escapeAttr(c.file)}" alt="${escapeAttr(c.caption)}" ${loading} width="130" height="150">
       ${nameHTML(c)}
       ${addr}
       ${acts}
@@ -313,6 +316,7 @@
   function render(filter) {
     const query = (filter || "").trim().toLowerCase();
     let shown = 0;
+    let cardIndex = 0;
     const parts = [];
     for (const L of LETTERS) {
       const rows = (byLetter[L] || []).filter(c => {
@@ -323,9 +327,16 @@
       if (!rows.length) continue;
       shown += rows.length;
       parts.push(`<div class="letter-row" id="letter-${L}"><h2 class="letter">${L}</h2>${LEGEND_COMPACT}</div>`);
-      parts.push(`<div class="grid">${rows.map(cardHTML).join("")}</div>`);
+      parts.push(`<div class="grid">${rows.map(c => cardHTML(c, cardIndex++)).join("")}</div>`);
     }
     app.innerHTML = parts.join("");
+    requestAnimationFrame(() => {
+      document.querySelectorAll("#app img").forEach(img => {
+        if (img.getBoundingClientRect().top < window.innerHeight + 200) {
+          img.loading = "eager";
+        }
+      });
+    });
     meta.textContent = query
       ? `${shown} match${shown === 1 ? "" : "es"} of ${classmates.length}`
       : `${classmates.length} classmates`;
