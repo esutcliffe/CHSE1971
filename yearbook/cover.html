@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHSE Class of 1971 · Cranstonian</title>
+<style>
+  :root {
+    --navy: #1f3a5f;
+    --bg: #f7f5f1;
+    --muted: #6b665e;
+    --gold: #c5a35a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, system-ui, sans-serif;
+    background: var(--bg);
+    color: #111;
+  }
+  header {
+    background: var(--navy);
+    color: #fff;
+    padding: 20px 24px 18px;
+  }
+  header .school { margin: 0 0 4px; opacity: .85; font-size: .9rem; }
+  header h1 { margin: 0; font-size: clamp(1.35rem, 3vw, 1.75rem); font-weight: 700; }
+  .wrap {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 28px 24px 64px;
+    text-align: center;
+  }
+  .hint {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: .95rem;
+  }
+  .stage {
+    perspective: 1400px;
+    margin: 0 auto 22px;
+    max-width: 420px;
+  }
+  .book {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1264 / 1568;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 18px 40px rgba(20, 30, 50, .28);
+  }
+  .book:focus-visible {
+    outline: 3px solid var(--navy);
+    outline-offset: 4px;
+  }
+  .cover-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 4px;
+    overflow: hidden;
+    transform-origin: left center;
+    transition: transform .85s cubic-bezier(.2, .7, .2, 1);
+    background: #1a3a28;
+  }
+  .cover-face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+  }
+  .book.open .cover-face {
+    transform: rotateY(-72deg);
+    box-shadow: -8px 10px 28px rgba(0,0,0,.25);
+  }
+  .page-edge {
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    background:
+      linear-gradient(90deg, #e8e2d6 0 8px, #f4f0e8 8px),
+      repeating-linear-gradient(
+        180deg,
+        #f7f3ea 0 2px,
+        #efe9dc 2px 4px
+      );
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.06);
+    z-index: -1;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn {
+    appearance: none;
+    border: 1px solid #c9c2b6;
+    background: #fff;
+    color: var(--navy);
+    font-weight: 700;
+    font-size: .95rem;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn.primary {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #fff;
+  }
+  .btn:hover, .btn:focus-visible {
+    filter: brightness(1.05);
+    outline: none;
+  }
+  .btn.primary:hover, .btn.primary:focus-visible {
+    filter: brightness(1.12);
+  }
+  .skip {
+    color: var(--muted);
+    font-size: .85rem;
+    background: none;
+    border: 0;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 8px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cover-face { transition: none; }
+    .book.open .cover-face { transform: none; opacity: .35; }
+  }
+</style>
+<link rel="stylesheet" href="../assets/home-button.css">
+</head>
+<body>
+<header>
+  <p class="school">Cranston High School East</p>
+  <h1>Class of 1971 · Cranstonian</h1>
+</header>
+<div class="wrap">
+  <p class="hint">1971 yearbook cover — tap the book to open the classmate directory</p>
+  <div class="stage">
+    <button type="button" class="book" id="book" aria-label="Open the 1971 Cranstonian and go to the classmate directory">
+      <div class="page-edge" aria-hidden="true"></div>
+      <div class="cover-face">
+        <img src="images/cranstonian-1971-cover.jpg" width="1264" height="1568" alt="1971 Cranstonian yearbook cover: green leather with gold Cranston High School East seal and Cranstonian script">
+      </div>
+    </button>
+  </div>
+  <div class="actions">
+    <button type="button" class="btn primary" id="openBtn">Open yearbook</button>
+    <a class="skip" id="skip" href="index.html">Skip to classmate directory</a>
+  </div>
+</div>
+<script>
+(function () {
+  const DEST = "index.html";
+  const book = document.getElementById("book");
+  const openBtn = document.getElementById("openBtn");
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let going = false;
+
+  function go() {
+    if (going) return;
+    going = true;
+    book.classList.add("open");
+    const delay = reduce ? 0 : 900;
+    setTimeout(function () {
+      window.location.href = DEST;
+    }, delay);
+  }
+
+  book.addEventListener("click", go);
+  openBtn.addEventListener("click", go);
+  book.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      go();
+    }
+  });
+})();
+</script>
+<script src="../assets/home-button.js" defer></script>
+</body>
+</html>
