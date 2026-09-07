@@ -9,7 +9,6 @@
     --navy: #1f3a5f;
     --bg: #f7f5f1;
     --muted: #6b665e;
-    --gold: #c5a35a;
   }
   * { box-sizing: border-box; }
   body {
@@ -60,6 +59,22 @@
     outline: 3px solid var(--navy);
     outline-offset: 4px;
   }
+  .inside-page {
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #f4f0e8;
+    z-index: 0;
+  }
+  .inside-page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    pointer-events: none;
+  }
   .cover-face {
     position: absolute;
     inset: 0;
@@ -69,6 +84,8 @@
     transform-origin: left center;
     transition: transform .85s cubic-bezier(.2, .7, .2, 1);
     background: #1a3a28;
+    z-index: 1;
+    box-shadow: 2px 0 8px rgba(0,0,0,.15);
   }
   .cover-face img {
     width: 100%;
@@ -78,22 +95,8 @@
     pointer-events: none;
   }
   .book.open .cover-face {
-    transform: rotateY(-72deg);
-    box-shadow: -8px 10px 28px rgba(0,0,0,.25);
-  }
-  .page-edge {
-    position: absolute;
-    inset: 0;
-    border-radius: 4px;
-    background:
-      linear-gradient(90deg, #e8e2d6 0 8px, #f4f0e8 8px),
-      repeating-linear-gradient(
-        180deg,
-        #f7f3ea 0 2px,
-        #efe9dc 2px 4px
-      );
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,.06);
-    z-index: -1;
+    transform: rotateY(-78deg);
+    box-shadow: -10px 12px 28px rgba(0,0,0,.28);
   }
   .actions {
     display: flex;
@@ -138,7 +141,7 @@
   }
   @media (prefers-reduced-motion: reduce) {
     .cover-face { transition: none; }
-    .book.open .cover-face { transform: none; opacity: .35; }
+    .book.open .cover-face { transform: none; opacity: .2; }
   }
 </style>
 <link rel="stylesheet" href="../assets/home-button.css">
@@ -149,10 +152,12 @@
   <h1>Class of 1971 · Cranstonian</h1>
 </header>
 <div class="wrap">
-  <p class="hint">1971 yearbook cover — tap the book to open the classmate directory</p>
+  <p class="hint">1971 yearbook — tap the cover to open onto the first senior portraits</p>
   <div class="stage">
     <button type="button" class="book" id="book" aria-label="Open the 1971 Cranstonian and go to the classmate directory">
-      <div class="page-edge" aria-hidden="true"></div>
+      <div class="inside-page" aria-hidden="true">
+        <img src="images/cranstonian-1971-page1.jpg" width="1200" height="1576" alt="">
+      </div>
       <div class="cover-face">
         <img src="images/cranstonian-1971-cover.jpg" width="1264" height="1568" alt="1971 Cranstonian yearbook cover: green leather with gold Cranston High School East seal and Cranstonian script">
       </div>
@@ -175,7 +180,7 @@
     if (going) return;
     going = true;
     book.classList.add("open");
-    const delay = reduce ? 0 : 900;
+    const delay = reduce ? 0 : 950;
     setTimeout(function () {
       window.location.href = DEST;
     }, delay);
