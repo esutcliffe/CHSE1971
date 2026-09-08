@@ -153,7 +153,7 @@
     <span>·</span>
     <a href="../missing/">Missing classmates</a>
   </p>
-  <p class="intro">These are the classmates reported as deceased. A name links to an obituary when we have one on this site. Dates are shown when they were recorded on the earlier class list.</p>
+  <p class="intro">These are the classmates reported as deceased. A name links to an obituary when we have one on this site. Dates are shown when they were recorded on the earlier class list. Where we have a married name from the older class list, it shows as Given (Maiden) Married.</p>
   <div class="toolbar">
     <input id="q" class="search" type="search" placeholder="Search in memoriam…" autocomplete="off">
     <div id="meta" class="meta"></div>
@@ -176,14 +176,20 @@
 
   let people = [];
   let dates = {};
+  let marriedByCaption = {};
   try {
-    const [res, dres] = await Promise.all([
+    const [res, dres, mres] = await Promise.all([
       fetch("../yearbook/classmates-slim.json"),
-      fetch("dates.json")
+      fetch("dates.json"),
+      fetch("../yearbook/married-display.json")
     ]);
     if (!res.ok) throw new Error("Could not load classmates-slim.json");
     const data = await res.json();
     if (dres.ok) dates = await dres.json();
+    if (mres.ok) {
+      const mdata = await mres.json();
+      marriedByCaption = mdata.by_caption || {};
+    }
     people = (data.classmates || []).filter(c => c.status === "deceased");
     people.sort((a, b) => (a.caption || "").localeCompare(b.caption || "", "en", { sensitivity: "base" }));
     status.style.display = "none";
@@ -191,6 +197,10 @@
     status.textContent = "Could not load the in memoriam list.";
     console.error(err);
     return;
+  }
+
+  function displayName(c) {
+    return marriedByCaption[c.caption] || c.caption || "";
   }
 
   const byLetter = {};
@@ -214,7 +224,7 @@
   }
 
   function nameHTML(c) {
-    const cap = escapeHtml(c.caption);
+    const cap = escapeHtml(displayName(c));
     if (hasObit(c)) {
       return `<a class="name" href="${escapeAttr(c.status_href)}">${cap}</a>`;
     }
@@ -246,7 +256,7 @@
     for (const L of LETTERS) {
       const rows = (byLetter[L] || []).filter(c => {
         if (!query) return true;
-        const hay = [c.caption, c.first, c.last, dates[c.caption] || ""].join(" ").toLowerCase();
+        const hay = [c.caption, displayName(c), c.first, c.last, dates[c.caption] || ""].join(" ").toLowerCase();
         return hay.includes(query);
       });
       if (!rows.length) continue;

@@ -149,7 +149,7 @@
     <span>·</span>
     <a href="../deceased/">In memoriam</a>
   </p>
-  <p class="intro">The class no longer has any valid contact information on these classmates. Names are listed as they appear in the yearbook (Last, First).</p>
+  <p class="intro">The class no longer has any valid contact information on these classmates. Names use the yearbook form (Last, First); where we have a married name from the older class list, it shows as Given (Maiden) Married.</p>
   <div class="toolbar">
     <input id="q" class="search" type="search" placeholder="Search missing classmates…" autocomplete="off">
     <div id="meta" class="meta"></div>
@@ -171,10 +171,18 @@
   const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
   let people = [];
+  let marriedByCaption = {};
   try {
-    const res = await fetch("../yearbook/classmates-slim.json");
+    const [res, mres] = await Promise.all([
+      fetch("../yearbook/classmates-slim.json"),
+      fetch("../yearbook/married-display.json")
+    ]);
     if (!res.ok) throw new Error("Could not load classmates-slim.json");
     const data = await res.json();
+    if (mres.ok) {
+      const mdata = await mres.json();
+      marriedByCaption = mdata.by_caption || {};
+    }
     people = (data.classmates || []).filter(c => c.status === "missing");
     people.sort((a, b) => (a.caption || "").localeCompare(b.caption || "", "en", { sensitivity: "base" }));
     status.style.display = "none";
@@ -182,6 +190,10 @@
     status.textContent = "Could not load the missing classmates list.";
     console.error(err);
     return;
+  }
+
+  function displayName(c) {
+    return marriedByCaption[c.caption] || c.caption || "";
   }
 
   const byLetter = {};
@@ -215,14 +227,14 @@
     for (const L of LETTERS) {
       const rows = (byLetter[L] || []).filter(c => {
         if (!query) return true;
-        const hay = [c.caption, c.first, c.last].join(" ").toLowerCase();
+        const hay = [c.caption, displayName(c), c.first, c.last].join(" ").toLowerCase();
         return hay.includes(query);
       });
       if (!rows.length) continue;
       shown += rows.length;
       parts.push(`<h2 class="letter" id="letter-${L}">${L}</h2>`);
       parts.push(`<ul class="list">${rows.map(c =>
-        `<li><span class="name">${escapeHtml(c.caption)}</span></li>`
+        `<li><span class="name">${escapeHtml(displayName(c))}</span></li>`
       ).join("")}</ul>`);
     }
     app.innerHTML = parts.join("");
