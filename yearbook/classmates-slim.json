@@ -7020,7 +7020,9 @@
       "activities": "Pan American Club 2, 3, 4; Thyrsus Club 3, 4; Thunderbolt 3, 4; Rhode Island College History Colloquium 3; Foster Parents Committee 4; Tutoring 3.",
       "has_photo": true,
       "file": "crops/59_08_singer_joyce_s.jpg",
-      "status": "in_touch"
+      "status": "deceased",
+      "status_href": "../Obituaries/JoyceSinger.htm",
+      "status_source": "obituary_shalom_2026_ernie_approved"
     },
     {
       "last": "Sisti",
@@ -8266,9 +8268,9 @@
     }
   ],
   "status_counts": {
-    "in_touch": 285,
+    "in_touch": 284,
     "missing": 337,
-    "deceased": 111,
+    "deceased": 112,
     "none": 0
   }
 }
