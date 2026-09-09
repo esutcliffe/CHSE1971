@@ -1,8 +1,8 @@
 {
   "title": "CHSE Class of 1971",
-  "count": 733,
+  "count": 761,
   "photos": 686,
-  "no_photo": 47,
+  "no_photo": 75,
   "classmates": [
     {
       "last": "Abbenante",
@@ -205,6 +205,18 @@
       "has_photo": true,
       "file": "crops/02_10_anderson_sandra_pauline.jpg",
       "status": "in_touch"
+    },
+    {
+      "last": "Andrews",
+      "first": "Angela",
+      "caption": "Andrews, Angela",
+      "address": "",
+      "activities": "Angela does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-female-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
     },
     {
       "last": "Angell",
@@ -1304,6 +1316,18 @@
     },
     {
       "last": "Casale",
+      "first": "Jennifer",
+      "caption": "Casale, Jennifer",
+      "address": "",
+      "activities": "Jennifer does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-female-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
+    },
+    {
+      "last": "Casale",
       "first": "John",
       "caption": "Casale, John",
       "address": "11 Massachusetts Street",
@@ -1396,6 +1420,18 @@
     },
     {
       "last": "Champagne",
+      "first": "Christine",
+      "caption": "Champagne, Christine",
+      "address": "",
+      "activities": "Christine does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-female-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
+    },
+    {
+      "last": "Champagne",
       "first": "Stephen",
       "caption": "Champagne, Stephen",
       "address": "163 Bluff Avenue",
@@ -1453,6 +1489,18 @@
       "status": "missing",
       "status_href": "../missing/",
       "status_source": "missing_classmates_xlsx_2026"
+    },
+    {
+      "last": "Chisholm",
+      "first": "Scott",
+      "caption": "Chisholm, Scott",
+      "address": "",
+      "activities": "Scott does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-male-sm.jpg",
+      "status": "deceased",
+      "status_href": "../deceased/",
+      "status_source": "non_yearbook_xlsx_2026"
     },
     {
       "last": "Ciano",
@@ -1845,6 +1893,18 @@
       "status_source": "missing_classmates_xlsx_2026"
     },
     {
+      "last": "Daley",
+      "first": "Michaela Terese",
+      "caption": "Daley, Michaela Terese",
+      "address": "",
+      "activities": "Michaela does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-female-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
+    },
+    {
       "last": "Danella",
       "first": "Theresa",
       "caption": "Danella, Theresa",
@@ -2089,6 +2149,18 @@
       "status": "in_touch"
     },
     {
+      "last": "DesRoches",
+      "first": "Jan",
+      "caption": "DesRoches, Jan",
+      "address": "",
+      "activities": "Jan does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-female-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
+    },
+    {
       "last": "Deverell",
       "first": "David Roy",
       "caption": "Deverell, David Roy",
@@ -2139,6 +2211,18 @@
       "has_photo": true,
       "file": "crops/18_10_dias_doreen_a.jpg",
       "status": "in_touch"
+    },
+    {
+      "last": "Diaz",
+      "first": "Norma",
+      "caption": "Diaz, Norma",
+      "address": "",
+      "activities": "Norma does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-female-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
     },
     {
       "last": "DiBattista",
@@ -2483,6 +2567,18 @@
       "status": "missing",
       "status_href": "../missing/",
       "status_source": "missing_classmates_xlsx_2026"
+    },
+    {
+      "last": "Elmstrom",
+      "first": "Kurt",
+      "caption": "Elmstrom, Kurt",
+      "address": "",
+      "activities": "Kurt does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-male-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
     },
     {
       "last": "Emma",
@@ -2883,6 +2979,18 @@
       "status_source": "bio_page"
     },
     {
+      "last": "Gabriel",
+      "first": "Geoffrey",
+      "caption": "Gabriel, Geoffrey",
+      "address": "",
+      "activities": "Geoffrey does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-male-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
+    },
+    {
       "last": "Galkin",
       "first": "Ellen Lee",
       "caption": "Galkin, Ellen Lee",
@@ -3075,6 +3183,18 @@
       "status": "in_touch"
     },
     {
+      "last": "Gibb",
+      "first": "Elizabeth",
+      "caption": "Gibb, Elizabeth",
+      "address": "",
+      "activities": "Elizabeth does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-female-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
+    },
+    {
       "last": "Gibson",
       "first": "Larry John",
       "caption": "Gibson, Larry John",
@@ -3188,6 +3308,18 @@
     },
     {
       "last": "Golden",
+      "first": "Brent",
+      "caption": "Golden, Brent",
+      "address": "",
+      "activities": "Brent does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-male-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
+    },
+    {
+      "last": "Golden",
       "first": "Breolt M.",
       "caption": "Golden, Breolt M.",
       "address": "36 Stevens Road",
@@ -3205,6 +3337,18 @@
       "has_photo": true,
       "file": "crops/27_12_goldis_nancy_lynne.jpg",
       "status": "in_touch"
+    },
+    {
+      "last": "Gomes",
+      "first": "John A.",
+      "caption": "Gomes, John A.",
+      "address": "",
+      "activities": "John does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-male-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
     },
     {
       "last": "Gonegonto",
@@ -3229,6 +3373,18 @@
       "status": "missing",
       "status_href": "../missing/",
       "status_source": "missing_classmates_xlsx_2026"
+    },
+    {
+      "last": "Gormley",
+      "first": "Joseph H.",
+      "caption": "Gormley, Joseph H.",
+      "address": "",
+      "activities": "Joseph does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-male-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
     },
     {
       "last": "Gornstein",
@@ -3893,6 +4049,18 @@
       "status_source": "missing_classmates_xlsx_2026"
     },
     {
+      "last": "Jacobs",
+      "first": "Susan",
+      "caption": "Jacobs, Susan",
+      "address": "",
+      "activities": "Susan does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-female-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
+    },
+    {
       "last": "Jamgochian",
       "first": "Diane L.",
       "caption": "Jamgochian, Diane L.",
@@ -4100,6 +4268,18 @@
     },
     {
       "last": "Kennedy",
+      "first": "Bonni",
+      "caption": "Kennedy, Bonni",
+      "address": "",
+      "activities": "Bonni does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-female-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
+    },
+    {
+      "last": "Kennedy",
       "first": "John Stephen",
       "caption": "Kennedy, John Stephen",
       "address": "120 Waite Avenue",
@@ -4245,6 +4425,18 @@
       "status": "in_touch"
     },
     {
+      "last": "Kubbe",
+      "first": "Charles E.",
+      "caption": "Kubbe, Charles E.",
+      "address": "",
+      "activities": "Charles does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-male-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
+    },
+    {
       "last": "Lacasse",
       "first": "Paul James",
       "caption": "Lacasse, Paul James",
@@ -4287,6 +4479,18 @@
       "has_photo": true,
       "file": "crops/37_03_lanni_david_charles.jpg",
       "status": "in_touch"
+    },
+    {
+      "last": "Larson",
+      "first": "James",
+      "caption": "Larson, James",
+      "address": "",
+      "activities": "James does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-male-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
     },
     {
       "last": "Lau",
@@ -4525,6 +4729,18 @@
       "status_source": "missing_classmates_xlsx_2026"
     },
     {
+      "last": "Lombardi",
+      "first": "John",
+      "caption": "Lombardi, John",
+      "address": "",
+      "activities": "John does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-male-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
+    },
+    {
       "last": "Lonardo",
       "first": "Thomas Domenic",
       "caption": "Lonardo, Thomas Domenic",
@@ -4703,6 +4919,18 @@
       "status": "missing",
       "status_href": "../missing/",
       "status_source": "missing_classmates_xlsx_2026"
+    },
+    {
+      "last": "Maguire",
+      "first": "Debra",
+      "caption": "Maguire, Debra",
+      "address": "",
+      "activities": "Debra does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-female-sm.jpg",
+      "status": "deceased",
+      "status_href": "../deceased/",
+      "status_source": "non_yearbook_xlsx_2026"
     },
     {
       "last": "Maguire",
@@ -5135,6 +5363,18 @@
       "status_source": "missing_classmates_xlsx_2026"
     },
     {
+      "last": "McDougald",
+      "first": "Carleen",
+      "caption": "McDougald, Carleen",
+      "address": "",
+      "activities": "Carleen does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-female-sm.jpg",
+      "status": "deceased",
+      "status_href": "../deceased/",
+      "status_source": "non_yearbook_xlsx_2026"
+    },
+    {
       "last": "McElroy",
       "first": "Betty Ann",
       "caption": "McElroy, Betty Ann",
@@ -5269,6 +5509,18 @@
       "status_source": "deceased_classmates_xlsx_2026"
     },
     {
+      "last": "McSparren",
+      "first": "John",
+      "caption": "McSparren, John",
+      "address": "",
+      "activities": "John does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-male-sm.jpg",
+      "status": "deceased",
+      "status_href": "../deceased/",
+      "status_source": "non_yearbook_xlsx_2026"
+    },
+    {
       "last": "Mechnig",
       "first": "Robert James",
       "caption": "Mechnig, Robert James",
@@ -5363,6 +5615,18 @@
       "status": "deceased",
       "status_href": "../deceased/",
       "status_source": "deceased_classmates_xlsx_2026"
+    },
+    {
+      "last": "Miller",
+      "first": "Barry",
+      "caption": "Miller, Barry",
+      "address": "",
+      "activities": "Barry does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-male-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
     },
     {
       "last": "Miller",
@@ -6191,6 +6455,18 @@
       "status": "in_touch"
     },
     {
+      "last": "Poulin",
+      "first": "Roxanne",
+      "caption": "Poulin, Roxanne",
+      "address": "",
+      "activities": "Roxanne does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-female-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
+    },
+    {
       "last": "Prignano",
       "first": "Joyce",
       "caption": "Prignano, Joyce",
@@ -6289,6 +6565,18 @@
       "has_photo": true,
       "file": "crops/53_05_rekrut_alejander.jpg",
       "status": "in_touch"
+    },
+    {
+      "last": "Rekrut",
+      "first": "Alex",
+      "caption": "Rekrut, Alex",
+      "address": "",
+      "activities": "Alex does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-male-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
     },
     {
       "last": "Renza",
@@ -6675,6 +6963,18 @@
       "status": "deceased",
       "status_href": "../deceased/",
       "status_source": "deceased_classmates_xlsx_2026"
+    },
+    {
+      "last": "Salisbury",
+      "first": "Margaret",
+      "caption": "Salisbury, Margaret",
+      "address": "",
+      "activities": "Margaret does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-female-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
     },
     {
       "last": "Salvati",
@@ -7069,6 +7369,18 @@
       "status": "in_touch"
     },
     {
+      "last": "Smaragdas",
+      "first": "Nikitas",
+      "caption": "Smaragdas, Nikitas",
+      "address": "",
+      "activities": "Nikitas does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-male-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
+    },
+    {
       "last": "Smith",
       "first": "Tod G.",
       "caption": "Smith, Tod G.",
@@ -7079,6 +7391,18 @@
       "status": "deceased",
       "status_href": "../Obituaries/TodSmith.htm",
       "status_source": "obituary_legacy_rosehill_2025_ernie_approved"
+    },
+    {
+      "last": "Soderlund",
+      "first": "Sharon A.",
+      "caption": "Soderlund, Sharon A.",
+      "address": "",
+      "activities": "Sharon does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-female-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
     },
     {
       "last": "Sousa",
@@ -7219,6 +7543,18 @@
       "status": "missing",
       "status_href": "../missing/",
       "status_source": "missing_classmates_xlsx_2026"
+    },
+    {
+      "last": "Stearns",
+      "first": "Linda",
+      "caption": "Stearns, Linda",
+      "address": "",
+      "activities": "Linda does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-female-sm.jpg",
+      "status": "missing",
+      "status_href": "../missing/",
+      "status_source": "non_yearbook_xlsx_2026"
     },
     {
       "last": "Stevens",
@@ -8269,8 +8605,8 @@
   ],
   "status_counts": {
     "in_touch": 284,
-    "missing": 337,
-    "deceased": 112,
+    "missing": 361,
+    "deceased": 116,
     "none": 0
   }
 }
