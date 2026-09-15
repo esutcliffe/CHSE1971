@@ -6778,7 +6778,9 @@
       "activities": "Student Council 4; Senior Class Council 4; Wrestling 2; Citizenship Committee 3, 4, Chairman 4; Band 2, 3, 4; Principal's Council 4; Chess Club 2; Spanish Club 4; Vandalism Committee 3, Chairman 3.",
       "has_photo": true,
       "file": "crops/55_03_roiff_paul_gary.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/paul_roiff.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "Romano",
