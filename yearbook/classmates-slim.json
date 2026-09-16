@@ -6630,7 +6630,9 @@
       "activities": "National Honor Society 3, 4; U.R.I. Chemistry Seminars 3; R.I.C. History Colloquia 3, 4.",
       "has_photo": true,
       "file": "crops/54_02_rheaume_ernest_leonard.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/ernie_rheaume.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "Ricci",
