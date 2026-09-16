@@ -2190,7 +2190,9 @@
       "activities": "Thyrsus Club 3, 4; Office Practice 4; Cafeteria Marshal 3; Library Aide 3, 4; Hockey Club 2.",
       "has_photo": true,
       "file": "crops/18_08_dewey_patricia_j.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/patricia_dewey_giarrusso.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "Dias",
@@ -3180,7 +3182,9 @@
       "activities": "Wrestling Manager 2, 3, 4; Wrestling Club 3, 4, President 3; National Honor Society 3, 4; Color Guard 3, 4; Ways and Means Committee 3.",
       "has_photo": true,
       "file": "crops/26_12_giarusso_patricia_lynn.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/pat_giarusso.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "Gibb",
