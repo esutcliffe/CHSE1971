@@ -1,8 +1,8 @@
 {
   "title": "CHSE Class of 1971",
-  "count": 761,
+  "count": 762,
   "photos": 686,
-  "no_photo": 75,
+  "no_photo": 76,
   "classmates": [
     {
       "last": "Abbenante",
@@ -81,6 +81,18 @@
       "has_photo": true,
       "file": "crops/01_07_agronick_sandra_gail.jpg",
       "status": "in_touch"
+    },
+    {
+      "last": "Alford",
+      "first": "George",
+      "caption": "Alford, George",
+      "address": "",
+      "activities": "George does not appear in the 1971 senior class yearbook.",
+      "has_photo": false,
+      "file": "blanks/blank-male-sm.jpg",
+      "status": "in_touch",
+      "status_href": "../bios/george_alford.html",
+      "status_source": "bio_editor_genealogist_2026_card_created"
     },
     {
       "last": "Allard",
@@ -250,7 +262,9 @@
       "activities": "DECA 4; Ampersand 3, 4; Football Club 3, 4; J.V. Football 2.",
       "has_photo": true,
       "file": "crops/03_01_aquilante_donald_matthew.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/donald_aquilante.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "Arbige",
@@ -606,7 +620,9 @@
       "activities": "Band 2, 3, 4, Band Officer 4; Drum Major 2, 3, 4, Head Major 4; Track Club 3; Indoor Track 3; Soccer 4; Soccer Club 4.",
       "has_photo": true,
       "file": "crops/06_04_blair_eugene_henry.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/gene_blair.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "Blinkhorn",
@@ -8612,7 +8628,7 @@
     }
   ],
   "status_counts": {
-    "in_touch": 288,
+    "in_touch": 289,
     "missing": 357,
     "deceased": 116,
     "none": 0
