@@ -5683,8 +5683,8 @@
       "has_photo": false,
       "file": "blanks/blank-male-sm.jpg",
       "status": "in_touch",
-      "status_href": "../bios/alan_mittleman.htm",
-      "status_source": "bio_page"
+      "status_href": "../bios/alan_mittleman.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "Mizer",
