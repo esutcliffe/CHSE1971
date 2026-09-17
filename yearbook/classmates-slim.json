@@ -2880,7 +2880,9 @@
       "activities": "Cranstonian Editorial Staff 4; Cross Country 2, 3, 4, Captain 4; Swimming 2, 3; Outdoor Track 2, 3, 4; Indoor Track 4; Track Club 3, 4; Cranstonian Homeroom Representative 4.",
       "has_photo": true,
       "file": "crops/24_02_fowler_david_bradford.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/dave_fowler.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "Fowler",
@@ -4426,7 +4428,9 @@
       "activities": "Thyrsus Club 2, 3, 4; Thunderbolt Staff 2, 3, 4, Business Manager 3, 4; Ecology Action 3, 4, Secretary 4; Charisma 4; Folk Workshop 2, 3; Folk Show 3; Future Teachers of America 3; Student Tutoring 3.",
       "has_photo": true,
       "file": "crops/36_07_kougasian_joan_alison.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/jakki_horan.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "Kubbe",
@@ -4482,7 +4486,9 @@
       "activities": "",
       "has_photo": true,
       "file": "crops/37_03_lanni_david_charles.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/dave_lanni.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "Larson",
