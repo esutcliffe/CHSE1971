@@ -4562,9 +4562,9 @@
       "activities": "Future Teachers of America 2, 3, 4; Library Aids 2, 3, 4; Thunderbolt Staff 3, 4, Circulation Manager 3, 4; Cranstonian Homeroom Representative 3, 4; Mixed Chorus 4.",
       "has_photo": true,
       "file": "crops/37_08_lazaroff_beverly_ann.jpg",
-      "status": "missing",
-      "status_href": "../missing/",
-      "status_source": "missing_classmates_xlsx_2026"
+      "status": "in_touch",
+      "status_href": "../bios/beverly_lazaroff_conrad.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "Lease",
@@ -6943,8 +6943,8 @@
       "has_photo": true,
       "file": "crops/56_05_safford_carol_evelyn.jpg",
       "status": "in_touch",
-      "status_href": "../bios/Carol%20Safford%20DeBeradinis.htm",
-      "status_source": "bio_page"
+      "status_href": "../bios/carol_deberadinis.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "Saffron",
@@ -8461,8 +8461,8 @@
       "has_photo": true,
       "file": "crops/68_02_williams_candace_elona.jpg",
       "status": "in_touch",
-      "status_href": "../bios/candy_(williams)_gauvin.htm",
-      "status_source": "bio_page"
+      "status_href": "../bios/candy_gauvin.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "Willis",
@@ -8606,8 +8606,8 @@
     }
   ],
   "status_counts": {
-    "in_touch": 287,
-    "missing": 358,
+    "in_touch": 288,
+    "missing": 357,
     "deceased": 116,
     "none": 0
   }
