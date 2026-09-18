@@ -1108,7 +1108,9 @@
       "activities": "Cheerleading 2; Class Council Secretary 3; Spanish Club 4; Wrestling Club 3, 4; Cervantes Society 3; National Honor Society 3, 4; Charisma 2; Social Committee 3; Pep Squad 4.",
       "has_photo": true,
       "file": "crops/10_02_caldarola_mary_ann.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/mary_caldarola_smith.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "Caldarone",
@@ -1982,7 +1984,9 @@
       "activities": "Dean's Council 2, 3, 4; Italian Club 3, 4, President 3; Class Council 2, 3, 4, Alternate 4; Leader Corps 4; Modern Dance 3, 4, Vice-President 3, Secretary 4; G.A.A. 4, Vice-President 4; Color Guard 4; Thunderbolt H.R. Representative 3; Football Follies 3, 4.",
       "has_photo": true,
       "file": "crops/16_04_decaro_paula_r.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/teddy_decaro.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "DeCesaris",
@@ -7744,7 +7748,9 @@
       "activities": "Class Council 2, 3, 4, Secretary 2; Thyrsus Club 2, 3; German Club 2, 3, 4; Future Teachers 2; Mixed Chorus 2, 4; Sunshine Committee 3, Chairman 3; Junior Talent Show 3; Cranstonian H.R. Representative 4.",
       "has_photo": true,
       "file": "crops/62_09_szynkarski_monika_m.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/monika_curnett.html",
+      "status_source": "bio_editor_genealogist_2026"
     },
     {
       "last": "Taber",
