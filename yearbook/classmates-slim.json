@@ -1434,7 +1434,9 @@
       "activities": "Delegate to Student Council 2, 3, 4; Class Council 2, 3, 4; School Representative to the Superintendent of Schools Youth Council 4; Social Committee 2, 3, 4; Citizenship Committee 2, 3, 4; Leader Corps 4; Cranston Follies 4; Intramurals 4.",
       "has_photo": true,
       "file": "crops/12_05_centofante_dianne_rose.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/dianne_centofante_miller.html",
+      "status_source": "bio_editor_genealogist_2026_superlatives"
     },
     {
       "last": "Champagne",
@@ -1842,7 +1844,9 @@
       "activities": "Basketball 2, 3, 4; Football 2, 4; Basketball Club 2, 3, 4, Vice-President 3; Future Farmers 4.",
       "has_photo": true,
       "file": "crops/15_10_d_antuono_domenic_a.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/domenic_dantuono.html",
+      "status_source": "bio_editor_genealogist_2026_superlatives"
     },
     {
       "last": "D'Arezzo",
@@ -2755,8 +2759,8 @@
       "has_photo": true,
       "file": "crops/23_02_feldman_debra_susan.jpg",
       "status": "missing",
-      "status_href": "../missing/",
-      "status_source": "missing_classmates_xlsx_2026"
+      "status_href": "../bios/debra_feldman.html",
+      "status_source": "bio_editor_genealogist_2026_superlatives"
     },
     {
       "last": "Feldman",
@@ -3286,7 +3290,9 @@
       "activities": "A Cappella Choir 2, 3, 4, President 4, Assistant Director 3, 4; Leader Corps 3, 4, Lieutenant Commander 4; Football Follies 3, 4; Spanish Club 4; Class Council, Alternate 2, 4.",
       "has_photo": true,
       "file": "crops/27_06_glen_gail_m.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/gail_glen_whitfield.html",
+      "status_source": "bio_editor_genealogist_2026_superlatives"
     },
     {
       "last": "Gliottone",
@@ -3738,7 +3744,9 @@
       "activities": "Football 2, 3, 4, Co-captain 4; Hockey 2, 3, 4; Baseball 2, 3, 4; Football Club 2; Student Council Senior Class Delegate 4.",
       "has_photo": true,
       "file": "crops/31_02_harrington_timothy_j.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/tim_harrington.html",
+      "status_source": "bio_editor_genealogist_2026_superlatives"
     },
     {
       "last": "Hart",
@@ -4208,7 +4216,9 @@
       "activities": "Sophomore Class Council 2; Future Teachers 2; Charisma 2; Social Committee 3, 4; Tutoring 4; National Honor Society 3, 4; Biology Lab Assistant 3; Junior Talent Show 3.",
       "has_photo": true,
       "file": "crops/34_12_kahn_karen_h.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/karen_kahn_rubin.html",
+      "status_source": "bio_editor_genealogist_2026_superlatives"
     },
     {
       "last": "Kahn",
@@ -5387,8 +5397,8 @@
       "has_photo": true,
       "file": "crops/43_11_mcdonough_garry_timothy.jpg",
       "status": "missing",
-      "status_href": "../missing/",
-      "status_source": "missing_classmates_xlsx_2026"
+      "status_href": "../bios/garry_mcdonough.html",
+      "status_source": "bio_editor_genealogist_2026_superlatives"
     },
     {
       "last": "McDougald",
@@ -5944,7 +5954,9 @@
       "activities": "A Cappella Choir 2, 3, 4; Dean's Council 2, 3, 4, Treasurer 3, Vice President 4; Folk Workshop 2, 3; Football Follies 2, 3.",
       "has_photo": true,
       "file": "crops/47_12_myron_carol_ann.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/carol_myron.html",
+      "status_source": "bio_editor_genealogist_2026_superlatives"
     },
     {
       "last": "Nahlik",
@@ -8016,7 +8028,9 @@
       "activities": "Student Council 3, 4; Class Council 2; Social Committee 2, 3, 4; Chairman 3; Athletic Committee 2, 3, 4, Chairman 4; Ways and Means Committee 2, 3, 4; Leader Corps 4; G.A.A. 2, 3, 4, Secretary 2, Vice President 3, President 4; Red Cross Council 2, 3, 4.",
       "has_photo": true,
       "file": "crops/64_03_troiano_carmen_anne.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/carmen_troiano_cavanaugh.html",
+      "status_source": "bio_editor_genealogist_2026_superlatives"
     },
     {
       "last": "Urbano",
