@@ -442,7 +442,7 @@
       "file": "crops/04_05_barry_daniel_robert.jpg",
       "status": "deceased",
       "status_href": "../Obituaries/DanielBarry.htm",
-      "status_source": "deceased_classmates_xlsx_2026"
+      "status_source": "obituary_nardolillo_2026_ernie_approved"
     },
     {
       "last": "Beach",
@@ -7420,7 +7420,7 @@
       "file": "crops/60_03_smith_tod_g.jpg",
       "status": "deceased",
       "status_href": "../Obituaries/TodSmith.htm",
-      "status_source": "obituary_legacy_rosehill_2025_ernie_approved"
+      "status_source": "obituary_pj_legacy_2025_ernie_approved"
     },
     {
       "last": "Soderlund",
@@ -7559,8 +7559,8 @@
       "has_photo": true,
       "file": "crops/61_02_stabile_ronald_nicholas.jpg",
       "status": "deceased",
-      "status_href": "../deceased/",
-      "status_source": "deceased_classmates_xlsx_2026"
+      "status_href": "../Obituaries/RonaldStabile.htm",
+      "status_source": "obituary_nardolillo_2012_ernie_approved"
     },
     {
       "last": "Stamp",
