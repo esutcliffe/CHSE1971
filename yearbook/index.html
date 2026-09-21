@@ -278,7 +278,9 @@
     const href = c.status_href;
     const label = (st === "deceased" && href && /Obituaries/i.test(href))
       ? "Deceased — open obituary"
-      : STATUS_LABEL[st];
+      : (st === "missing" && href && /bios\//i.test(href))
+        ? "Missing — open bio"
+        : STATUS_LABEL[st];
     if (st && href && label) {
       return `<a class="name-link ${st}" href="${escapeAttr(href)}" title="${escapeAttr(label)}">${escapeHtml(c.caption)}</a>`;
     }
