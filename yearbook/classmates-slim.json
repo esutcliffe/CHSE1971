@@ -8348,7 +8348,7 @@
       "activities": "Chess Club 2, 3; Mixed Chorus 2, 4; Cranston Follies 4; Library Aide 4; Thunderbolt Staff 3, 4, Senior Editor 4, Junior Editor 3.",
       "has_photo": true,
       "file": "crops/66_07_waite_laura_jane.jpg",
-      "status": "in_touch",
+      "status": "missing",
       "status_href": "../bios/laura_waite_sullivan.html",
       "status_source": "bio_editor_2026_09_20"
     },
@@ -8728,8 +8728,8 @@
     }
   ],
   "status_counts": {
-    "in_touch": 290,
-    "missing": 356,
+    "in_touch": 289,
+    "missing": 357,
     "deceased": 116,
     "none": 0
   }
