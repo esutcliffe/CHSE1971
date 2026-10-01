@@ -6162,7 +6162,7 @@
       "activities": "Cranstonian Editorial Staff 4; Social Committee 3; Mixed Chorus 2; National Honor Society 3, 4; Charisma 2; Thunderbolt 2; French Club 2, Vice President 2; Calendar Committee 3; Spanish Club 2; Foster Parents Comm. 4; Future Teachers 2.",
       "has_photo": true,
       "file": "crops/49_05_orenberg_sandra_robin.jpg",
-      "status": "missing",
+      "status": "in_touch",
       "status_href": "../bios/sandy_(orenberg)_greenspan.htm",
       "status_source": "legacy_bio_link_2026_10_01"
     },
@@ -8728,8 +8728,8 @@
     }
   ],
   "status_counts": {
-    "in_touch": 290,
-    "missing": 355,
+    "in_touch": 291,
+    "missing": 354,
     "deceased": 117,
     "none": 0
   }
