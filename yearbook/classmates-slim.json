@@ -4040,7 +4040,8 @@
       "activities": "A Cappella Choir 3, 4, Vice-President 4; Tutoring 3, 4; Soccer 3, 4; Basketball 2; Soccer Club 3, 4; Basketball Club 2; Spanish Club 4; Cervantes Honor Society 4; Class Council 3, 4; Mixed Chorus 2; Chess Club 2.",
       "has_photo": true,
       "file": "crops/33_02_iacono_thomas_jude.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/iacono_thomas.html"
     },
     {
       "last": "Ianni",
@@ -6291,6 +6292,7 @@
       "has_photo": true,
       "file": "crops/50_08_pastine_juliana_maria.jpg",
       "status": "in_touch",
+      "status_href": "../bios/pastine_juliana.html",
       "status_source": "genealogist_55th_reunion_2026_10_03"
     },
     {
