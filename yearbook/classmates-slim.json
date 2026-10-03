@@ -1918,9 +1918,9 @@
       "activities": "Wrestling 2, 3, 4; Wrestling Club 2, 3, 4; Soccer 4; Soccer Club 4.",
       "has_photo": true,
       "file": "crops/15_06_dailey_michael_f.jpg",
-      "status": "in_touch",
-      "status_href": "../bios/dailey_michael_f.html",
-      "status_source": "bio_editor_2026_09_22"
+      "status": "deceased",
+      "status_href": "../Obituaries/MichaelDailey.htm",
+      "status_source": "classmate_via_sister_2026_10_03"
     },
     {
       "last": "Dailey",
@@ -8731,9 +8731,9 @@
     }
   ],
   "status_counts": {
-    "in_touch": 291,
+    "in_touch": 290,
     "missing": 354,
-    "deceased": 117,
+    "deceased": 118,
     "none": 0
   }
 }
