@@ -2,6 +2,7 @@
   "note": "Display-only married/maiden names for missing/ and deceased/ pages. Key = yearbook caption (Last, First). Do not use on yearbook cards.",
   "source": "archive missing_people2.html via Editor mapping; Ernest format (Maiden) Married, Given e.g. (Conway) Hallam, Maureen",
   "by_caption": {
+    "Galkin, Ellen Lee": "(Galkin) Kenner, Ellen Lee",
     "Allard, Alice Ann": "(Allard) Greenard, Alice Ann",
     "Amiot, April Irene": "(Amiot) Howell, April Irene",
     "Boylan, Maureen Ann": "(Boylan) Kopsick, Maureen Ann",
