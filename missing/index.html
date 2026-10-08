@@ -110,8 +110,8 @@
   }
   .list li:first-child { border-top: none; }
   .name { font-weight: 700; color: var(--missing); }
-  a.name { text-decoration: none; color: var(--missing); }
-  a.name:hover, a.name:focus { text-decoration: underline; outline: none; }
+  a.name { text-decoration: underline; text-underline-offset: 2px; color: var(--missing); }
+  a.name:hover, a.name:focus { text-decoration-thickness: 2px; outline: none; }
   .status {
     color: var(--muted);
     font-size: .9rem;
