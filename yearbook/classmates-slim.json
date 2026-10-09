@@ -273,7 +273,7 @@
       "first": "Karen L.",
       "caption": "Arbige, Karen L.",
       "address": "192 Chandler Avenue",
-      "activities": "Dean's Council 2, 3, 4; National Honor Society 3, 4; Junior Alliance Français 4; Russian Club 2, 3; Thunderbolt 2.",
+      "activities": "Dean's Council 2, 3, 4; National Honor Society 3, 4; Junior Alliance Fran\u00e7ais 4; Russian Club 2, 3; Thunderbolt 2.",
       "has_photo": true,
       "file": "crops/03_02_arbige_karen_l.jpg",
       "status": "in_touch"
@@ -317,7 +317,7 @@
       "first": "Phillip Marc",
       "caption": "Arons, Phillip Marc",
       "address": "218 Fiat Avenue",
-      "activities": "Junior Alliance Français 4; Civic Leadership 4; Thunderbolt Staff 3; P.A. System 4; Cranstonian Advertising Staff 4; Junior Class Publicity 3; H.R. Alternate for Thunderbolt 3.",
+      "activities": "Junior Alliance Fran\u00e7ais 4; Civic Leadership 4; Thunderbolt Staff 3; P.A. System 4; Cranstonian Advertising Staff 4; Junior Class Publicity 3; H.R. Alternate for Thunderbolt 3.",
       "has_photo": true,
       "file": "crops/03_06_arons_phillip_marc.jpg",
       "status": "missing",
@@ -742,9 +742,9 @@
       "status_source": "in_memoriam_editor_2026_09_19"
     },
     {
-      "last": "Boulé",
+      "last": "Boul\u00e9",
       "first": "Denise M.",
-      "caption": "Boulé, Denise M.",
+      "caption": "Boul\u00e9, Denise M.",
       "address": "90 Oakland Avenue",
       "activities": "Class Council 3, 4, Vice-President 3, 4; Social Committee 3, 4; Citizenship Committee 3, 4; A.F.S. Committee 4; Hockey Club 3; Junior Talent Show 3, Chairman 3; Folk Show 3.",
       "has_photo": true,
@@ -1181,7 +1181,8 @@
       "activities": "Red Cross Council 2; Leader Corps 4; Thunderbolt Homeroom Alternate 4.",
       "has_photo": true,
       "file": "crops/10_08_canavan_kathleen_anne.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/canavan_kathleen.html"
     },
     {
       "last": "Candelmo",
@@ -1776,7 +1777,7 @@
       "first": "John F.",
       "caption": "Cotter, John F.",
       "address": "12 Gail Avenue",
-      "activities": "Debating Team 3, 4; Soccer 3, 4; U.R.I. Seminar—Biology 3; R.I.C. History Colloquium 4; Model Legislature 3, 4; Basketball 2.",
+      "activities": "Debating Team 3, 4; Soccer 3, 4; U.R.I. Seminar\u2014Biology 3; R.I.C. History Colloquium 4; Model Legislature 3, 4; Basketball 2.",
       "has_photo": true,
       "file": "crops/15_01_cotter_john_f.jpg",
       "status": "deceased",
@@ -2706,7 +2707,7 @@
       "first": "Cheryl Ann",
       "caption": "Fain, Cheryl Ann",
       "address": "246 Park Avenue",
-      "activities": "Debating Team 2, 3, Secretary 2; National Honor Society 3, 4; Junior Alliance Française 2, 3, 4; R.I.C. History Colloquium 3; Thunderbolt 2, 3, 4; Cranstonian Advertising Staff 3; Foster Parents Comm. 4; Thyrsus Club 2, 3; French Club 2, 3.",
+      "activities": "Debating Team 2, 3, Secretary 2; National Honor Society 3, 4; Junior Alliance Fran\u00e7aise 2, 3, 4; R.I.C. History Colloquium 3; Thunderbolt 2, 3, 4; Cranstonian Advertising Staff 3; Foster Parents Comm. 4; Thyrsus Club 2, 3; French Club 2, 3.",
       "has_photo": true,
       "file": "crops/22_07_fain_cheryl_ann.jpg",
       "status": "in_touch"
@@ -4635,7 +4636,7 @@
       "has_photo": true,
       "file": "crops/37_07_lawrence_sheila_jean.jpg",
       "status": "missing",
-      "status_href": "../missing/",
+      "status_href": "../bios/lawrence_sheila.html",
       "status_source": "missing_classmates_xlsx_2026"
     },
     {
