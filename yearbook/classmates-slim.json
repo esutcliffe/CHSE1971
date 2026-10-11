@@ -195,7 +195,7 @@
       "has_photo": true,
       "file": "crops/02_08_amiot_april_irene.jpg",
       "status": "missing",
-      "status_href": "../missing/",
+      "status_href": "../bios/amiot_april.html",
       "status_source": "missing_classmates_xlsx_2026"
     },
     {
@@ -981,7 +981,8 @@
       "activities": "Citizenship Committee 3, 4; National Honor Society 3, 4; Future Teachers Club 2, 3, 4, Historian 3; Baseball Manager 2, 3, 4; Red Cross Council 3; Ways and Means Committee 3; Hockey Club 3; Spanish Club 4.",
       "has_photo": true,
       "file": "crops/08_08_buckler_barbara_joan.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/buckler_barbara.html"
     },
     {
       "last": "Buckler",
@@ -992,7 +993,7 @@
       "has_photo": false,
       "file": "blanks/blank-male-sm.jpg",
       "status": "missing",
-      "status_href": "../missing/",
+      "status_href": "../bios/buckler_bruce.html",
       "status_source": "missing_classmates_xlsx_2026"
     },
     {
@@ -2609,7 +2610,7 @@
       "has_photo": true,
       "file": "crops/21_07_eisenstadt_ray_jane.jpg",
       "status": "missing",
-      "status_href": "../missing/",
+      "status_href": "../bios/eisenstadt_ray.html",
       "status_source": "missing_classmates_xlsx_2026"
     },
     {
@@ -3930,7 +3931,8 @@
       "activities": "Cross Country 2, 3, 4; Indoor Track 2, 3, 4; Outdoor Track 3, 4; Track Club 3, 4, President 4; Thyrsus Club 4; Junior Varsity Baseball 2.",
       "has_photo": true,
       "file": "crops/32_01_horridge_walter.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/horridge_walter.html"
     },
     {
       "last": "Horton",
