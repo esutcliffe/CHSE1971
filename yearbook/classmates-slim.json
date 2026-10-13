@@ -6541,7 +6541,8 @@
       "activities": "Cranstonian Editorial Staff 4; Student Council 4; Foster Parents Committee 2, 3, 4, Chairman 4; National Honor Society 3, 4; U.R.I. Chemistry Seminars 2; Future Teachers 2, 3, 4; Tutoring 3; Spanish Club 2, 3, Program Chairman 3; French Club 2.",
       "has_photo": true,
       "file": "crops/52_04_port_rhonda_debra.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/port_rhonda.html"
     },
     {
       "last": "Potter",
@@ -7769,7 +7770,7 @@
       "has_photo": true,
       "file": "crops/62_04_sugerman_claudia_beth.jpg",
       "status": "missing",
-      "status_href": "../missing/",
+      "status_href": "../bios/sugerman_claudia.html",
       "status_source": "missing_classmates_xlsx_2026"
     },
     {
