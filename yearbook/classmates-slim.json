@@ -2755,8 +2755,9 @@
       "activities": "Band 2, 3, 4; Chorus 2; Charisma 2; Track Club 2, 3; Orchestra 4.",
       "has_photo": true,
       "file": "crops/22_11_fallon_cosima_joan.jpg",
-      "status": "in_touch",
-      "status_href": "../bios/fallon_cosima.html"
+      "status": "deceased",
+      "status_href": "../Obituaries/CosimaFallon.htm",
+      "status_source": "obituary_dignity_memorial_2026_ernie_reported"
     },
     {
       "last": "Faubert",
@@ -8739,9 +8740,9 @@
     }
   ],
   "status_counts": {
-    "in_touch": 290,
+    "in_touch": 289,
     "missing": 354,
-    "deceased": 118,
+    "deceased": 119,
     "none": 0
   }
 }
