@@ -862,7 +862,7 @@
       "has_photo": true,
       "file": "crops/07_11_brough_shelley_l.jpg",
       "status": "missing",
-      "status_href": "../missing/",
+      "status_href": "../bios/brough_shelley.html",
       "status_source": "missing_classmates_xlsx_2026"
     },
     {
@@ -3690,7 +3690,8 @@
       "activities": "Cheerleading 2, 3, 4; Student Council 2, 3, 4, Secretary 3; Ways and Means Comm. 4; Cogitari 4, Chairman 4; Social Comm. 3; Football Follies 3; Student Representative to Faculty Advisory Board 4; A Cappella Choir 2, 3, 4; Foster Parents Comm. 2.",
       "has_photo": true,
       "file": "crops/30_06_haggis_barbara_marie.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/haggis_barbara.html"
     },
     {
       "last": "Haggstrom",
@@ -7991,7 +7992,8 @@
       "activities": "A.V.A. 2, 3, 4; Electronics Club 3; Engineering and Drafting Club 3, Vice President 3; Swimming 2; Cross Country 2.",
       "has_photo": true,
       "file": "crops/63_06_thompson_robert_james.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/thompson_robert.html"
     },
     {
       "last": "Tobin",
