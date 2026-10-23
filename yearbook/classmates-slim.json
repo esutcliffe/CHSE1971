@@ -4245,7 +4245,7 @@
       "has_photo": true,
       "file": "crops/34_10_joyce_barbara_jane.jpg",
       "status": "missing",
-      "status_href": "../missing/",
+      "status_href": "../bios/joyce_barbara.html",
       "status_source": "missing_classmates_xlsx_2026"
     },
     {
@@ -4702,7 +4702,8 @@
       "activities": "Hockey Club 3; Social Committee 3, 4; Office Practice 4; Mixed Chorus 3, 4.",
       "has_photo": true,
       "file": "crops/38_04_lepizzera_donna_marie.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/lepizzera_donna.html"
     },
     {
       "last": "Lepore",
