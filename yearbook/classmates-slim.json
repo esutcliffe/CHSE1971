@@ -2384,7 +2384,8 @@
       "activities": "Office Practice 4.",
       "has_photo": true,
       "file": "crops/19_08_dimuccio_linda_ann.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/dimuccio_linda.html"
     },
     {
       "last": "DiPrete",
@@ -2667,7 +2668,7 @@
       "has_photo": true,
       "file": "crops/22_03_ernst_william_david.jpg",
       "status": "missing",
-      "status_href": "../missing/",
+      "status_href": "../bios/ernst_william.html",
       "status_source": "missing_classmates_xlsx_2026"
     },
     {
