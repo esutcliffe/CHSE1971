@@ -6673,7 +6673,8 @@
       "activities": "Leader Corps 3, 4, Commander 4; Italian Club 3, 4, Vice President 3; Junior Class Publicity Committee 3; Football Follies 3, 4, Co-Chairman 3; Social Committee 3, 4; Thunderbolt 3; Girls' Athletic Association 2, 3, 4.",
       "has_photo": true,
       "file": "crops/53_04_rainone_catherine_ann.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/rainone_catherine.html"
     },
     {
       "last": "Rekrut",
@@ -7122,7 +7123,7 @@
       "has_photo": true,
       "file": "crops/57_01_samson_beverly_lee.jpg",
       "status": "missing",
-      "status_href": "../missing/",
+      "status_href": "../bios/samson_beverly.html",
       "status_source": "missing_classmates_xlsx_2026"
     },
     {
