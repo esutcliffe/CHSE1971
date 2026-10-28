@@ -7436,7 +7436,8 @@
       "activities": "Cranstonian Editorial Staff 4, Editor-in-chief 4; Charisma 3; National Honor Society 3, 4; Student Council 4; Tutoring 2; Hockey Club 3, 4; German Club 2, 3, 4; Italian Club 2.",
       "has_photo": true,
       "file": "crops/59_07_sinapi_linda_marie.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/sinapi_linda.html"
     },
     {
       "last": "Singer",
