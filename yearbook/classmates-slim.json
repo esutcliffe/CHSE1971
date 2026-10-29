@@ -1980,7 +1980,8 @@
       "activities": "A Cappella Choir 2, 3, 4; Chess Club 2.",
       "has_photo": true,
       "file": "crops/16_01_davies_robert_r.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/davies_robert.html"
     },
     {
       "last": "Davis",
