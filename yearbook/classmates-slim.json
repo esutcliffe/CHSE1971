@@ -4795,7 +4795,8 @@
       "activities": "Soccer 4; Soccer Club 4; Art Service 3.",
       "has_photo": true,
       "file": "crops/38_12_linnane_george_william.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/linnane_george.html"
     },
     {
       "last": "Lipson",
