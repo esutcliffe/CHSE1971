@@ -669,7 +669,8 @@
       "activities": "Ski Club 4; Track Club 3; Social Committee 3, 4; Ways and Means Committee 3.",
       "has_photo": true,
       "file": "crops/06_08_bond_susan_waltina.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/bond_susan.html"
     },
     {
       "last": "Bonner",
@@ -7875,7 +7876,7 @@
       "has_photo": true,
       "file": "crops/62_10_tagliaferri_paula_ann.jpg",
       "status": "missing",
-      "status_href": "../missing/",
+      "status_href": "../bios/tagliaferri_paula.html",
       "status_source": "missing_classmates_xlsx_2026"
     },
     {
@@ -8528,7 +8529,7 @@
       "has_photo": true,
       "file": "crops/67_07_wholey_pamela_a.jpg",
       "status": "missing",
-      "status_href": "../missing/",
+      "status_href": "../bios/wholey_pamela.html",
       "status_source": "missing_classmates_xlsx_2026"
     },
     {
