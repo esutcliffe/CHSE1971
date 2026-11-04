@@ -2220,7 +2220,8 @@
       "activities": "Tennis 2, 3, 4; Wrestling 2; Cross Country 2; Gymnastics Club 4.",
       "has_photo": true,
       "file": "crops/18_06_deverell_david_roy.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/deverell_david.html"
     },
     {
       "last": "Devine",
