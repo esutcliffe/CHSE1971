@@ -5602,7 +5602,8 @@
       "activities": "National Honor Society 3, 4; Civic Leadership 4; Future Teachers Club 3; Spanish Club 3, 4; Ways and Means Committee 4; Junior Alliance Francais 4; Delegate to Student Congress 4.",
       "has_photo": true,
       "file": "crops/45_01_mcmullen_patricia_ann.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/mcmullen_patricia.html"
     },
     {
       "last": "McSparren",
