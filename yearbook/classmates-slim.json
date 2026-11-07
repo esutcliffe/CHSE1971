@@ -4068,7 +4068,8 @@
       "activities": "Hockey 2, 3; Hockey Club 2, 3; Photography Club 2, 4.",
       "has_photo": true,
       "file": "crops/33_03_ianni_edward_frank.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/ianni_edward.html"
     },
     {
       "last": "Integlia",
