@@ -5557,7 +5557,8 @@
       "activities": "Swimming 3, 4; Class Council 2, 3, 4; Football 2; Outdoor Track 2, 3, 4; Junior Talent Show 3; Hockey Club 3, 4; DECA 4; Assembly Committee 3.",
       "has_photo": true,
       "file": "crops/44_05_mckendall_f_donald.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/mckendall_f_donald.html"
     },
     {
       "last": "McKenna",
