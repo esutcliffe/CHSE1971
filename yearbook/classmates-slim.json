@@ -1142,7 +1142,8 @@
       "activities": "Basketball Club 2; Basketball 2.",
       "has_photo": true,
       "file": "crops/10_04_callahan_john_william.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/callahan_john.html"
     },
     {
       "last": "Campanile",
