@@ -5850,7 +5850,8 @@
       "activities": "",
       "has_photo": false,
       "file": "blanks/blank-male-sm.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/moody_todd.html"
     },
     {
       "last": "Mooney",
