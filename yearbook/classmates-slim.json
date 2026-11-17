@@ -80,7 +80,8 @@
       "activities": "Hockey Club 3, 4; Modern Dance 4; Thyrsus Club 3; Alternate H.R. Representative 4.",
       "has_photo": true,
       "file": "crops/01_07_agronick_sandra_gail.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/agronick_sandra.html"
     },
     {
       "last": "Alford",
