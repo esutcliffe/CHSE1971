@@ -1,34 +1,30 @@
 {
-  "title": "CHSE Class of 1971 · Reunion Photos",
+  "title": "CHSE Class of 1971 \u00b7 Reunion Photos",
   "galleries": [
     {
       "n": 5,
       "label": "5th Reunion",
       "photos_page": "photos-5.html",
       "count": 0,
-      "images": [
-      ]
+      "images": []
     },
     {
       "n": 10,
       "label": "10th Reunion",
       "photos_page": "photos-10.html",
-      "count": 3,
+      "count": 2,
       "images": [
-        "images/10/IMG_2834 - 10th Reunion.jpg",
-        "images/10/Quonset.jpg",
-        "images/10/reunion25.jpg"
+        "images/10/class_group_photo.jpg",
+        "images/10/Quonset.jpg"
       ]
     },
     {
       "n": 15,
       "label": "15th Reunion",
       "photos_page": "photos-15.html",
-      "count": 3,
+      "count": 1,
       "images": [
-        "images/15/EV001_1.jpg",
-        "images/15/IMG_2831 - 15th Reunion2.jpg",
-        "images/15/Quonset.jpg"
+        "images/15/class_group_photo.jpg"
       ]
     },
     {
@@ -267,6 +263,15 @@
       ]
     },
     {
+      "n": 42,
+      "label": "60th Birthday Party",
+      "photos_page": "photos-60.html",
+      "count": 1,
+      "images": [
+        "images/60/DanBarry-DianneCentofanteCampbell-PatGiarrusso.jpg"
+      ]
+    },
+    {
       "n": 50,
       "label": "50th Reunion",
       "photos_page": "photos-50.html",
@@ -401,7 +406,7 @@
         "images/55/batch/batch5-img_9986.jpg",
         "images/55/batch/batch5-img_9987.jpg"
       ],
-      "note": "CHSE school tour (Ernie Rheaume / Gail), Chelo’s photos courtesy of classmate Trudy Saccocia Cipriano, and more reunion photos courtesy of Ernest Sutcliffe (Batches 1–5), Aug 28, 2026"
+      "note": "CHSE school tour (Ernie Rheaume / Gail), Chelo\u2019s photos courtesy of classmate Trudy Saccocia Cipriano, and more reunion photos courtesy of Ernest Sutcliffe (Batches 1\u20135), Aug 28, 2026"
     }
   ]
 }

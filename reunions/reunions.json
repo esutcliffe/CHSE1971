@@ -1,6 +1,6 @@
 {
   "title": "CHSE Class of 1971 · Reunions",
-  "count": 13,
+  "count": 14,
   "reunions": [
     {
       "n": 5,
@@ -22,7 +22,7 @@
       "href": "reunion10.htm",
       "has_page": true,
       "photos_href": "photos-10.html",
-      "photo_count": 3
+      "photo_count": 2
     },
     {
       "n": 15,
@@ -33,7 +33,7 @@
       "href": "reunion15.htm",
       "has_page": true,
       "photos_href": "photos-15.html",
-      "photo_count": 3
+      "photo_count": 1
     },
     {
       "n": 20,
@@ -111,6 +111,17 @@
       "has_page": true,
       "photos_href": "photos-40.html",
       "photo_count": 40
+    },
+    {
+      "n": 42,
+      "label": "60th Birthday Party",
+      "year": 2013,
+      "date": "2013",
+      "detail": "60th birthday party",
+      "href": "reunion60.html",
+      "has_page": true,
+      "photos_href": "photos-60.html",
+      "photo_count": 1
     },
     {
       "n": 50,
