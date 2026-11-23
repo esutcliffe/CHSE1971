@@ -1303,7 +1303,8 @@
       "activities": "Baseball 2; Chess Club 2.",
       "has_photo": true,
       "file": "crops/11_05_carn_ronald_charles.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/carn_ronald.html"
     },
     {
       "last": "Carpentier",
