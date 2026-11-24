@@ -1,6 +1,6 @@
 {
   "title": "CHSE Class of 1971 · Reunions",
-  "count": 14,
+  "count": 13,
   "reunions": [
     {
       "n": 5,
@@ -56,17 +56,6 @@
       "has_page": true,
       "photos_href": "photos-25.html",
       "photo_count": 1
-    },
-    {
-      "n": 30,
-      "label": "30th Reunion",
-      "year": 2001,
-      "date": "2001",
-      "detail": "No reunion held",
-      "href": null,
-      "has_page": false,
-      "photos_href": null,
-      "photo_count": 0
     },
     {
       "n": 31,
