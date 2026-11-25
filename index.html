@@ -144,6 +144,14 @@
   footer a { color: var(--muted); }
   footer p { margin: 4px 0; }
   footer .contact { font-size: .9rem; color: var(--ink, #333); }
+  a.year-link {
+    color: inherit;
+    text-decoration: none;
+  }
+  a.year-link:hover,
+  a.year-link:focus {
+    text-decoration: underline;
+  }
   @media (max-width: 520px) {
     .links a { grid-template-columns: 48px 1fr; }
     .icon { width: 48px; height: 48px; }
@@ -157,7 +165,7 @@
       <img class="banner" src="images/car_scene1.jpg" width="760" height="164" alt="Cranston High School East class scene">
       <div class="brand">
         <h1 class="title"><a href="history.html" style="color:inherit;text-decoration:none" title="History of Cranston High School East">Cranston High School East</a></h1>
-        <p class="sub">Class of 1971</p>
+        <p class="sub">Class of <a class="year-link" href="commencement.html" title="1971 Commencement Program">1971</a></p>
         <p class="tag">Thunderbolts</p>
       </div>
     </div>
@@ -220,7 +228,7 @@
       <p class="contact">Modifications, corrections, additions:
         <a href="mailto:webmaster@chse1971.com?subject=CHSE%201971%20site%20update">webmaster@chse1971.com</a></p>
       <p>Site constructed and maintained by <a href="bios/ernie_sutcliffe.html">Ernie Sutcliffe</a></p>
-      <p>Cranston High School East · Class of 1971</p>
+      <p>Cranston High School East · Class of <a class="year-link" href="commencement.html" title="1971 Commencement Program">1971</a></p>
       <p><a href="history.html">Cranston East High School</a></p>
     </footer>
   </main>
