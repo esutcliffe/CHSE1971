@@ -8268,7 +8268,8 @@
       "activities": "Engineering and Drafting Club 4.",
       "has_photo": true,
       "file": "crops/65_06_verduchi_paul_thomas.jpg",
-      "status": "in_touch"
+      "status": "in_touch",
+      "status_href": "../bios/verduchi_paul.html"
     },
     {
       "last": "Vicario",
