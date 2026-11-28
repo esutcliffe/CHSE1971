@@ -45,5 +45,5 @@ This file is documentation only. Nothing listed under leftover host junk has bee
 - `lwHostsCheck.php` — Liquid Web host-check
 - stub `.htaccess` files
 - `.smileys/` — old chat GIFs
-- Duplicate index variants: `index.htm`, `index2.html`, `index3.htm`, `index3.html`, `indexmain.htm`, `unavailable.html`
+- Duplicate index variants (`index.htm`, `index2.html`, `index3.htm`, `index3.html`, `indexmain.htm`, `index-legacy-2003.html`, `unavailable.html`) were removed in November 2026; the current homepage is `index.html`.
 - `wiki.html` (empty), `whereold2.html`, `random.htm`, `random.txt`, `Template.html`, `Thumbs.db`
